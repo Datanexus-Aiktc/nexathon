@@ -1,0 +1,47 @@
+
+/* --- Mobile Navigation --- */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Initially off-screen */
+        width: 70%;
+        height: 100vh;
+        background-color: var(--primary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right var(--transition-speed) ease-in-out;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* Timeline on mobile */
+@media (max-width: 768px) {
+    .timeline-wrapper::before {
+        left: 0.8rem;
+    }
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: var(--space-lg);
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item::after {
+        left: 0rem;
+    }
+}
