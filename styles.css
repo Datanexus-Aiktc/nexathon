@@ -13,6 +13,14 @@
     --secondary: #6EACDA;
     --tertiary: #E2E2B6;
 
+    /* Timeline Colors */
+    --online: #92d050;
+    --online-bg: rgba(146, 208, 80, 0.15);
+    --offline: #ff4444;
+    --offline-bg: rgba(200, 0, 0, 0.15);
+    --ended: #999999;
+    --ended-bg: rgba(153, 153, 153, 0.15);
+
     /* Spacing Scale (based on 1rem = 10px) */
     --space-xs: 0.8rem;
     --space-sm: 1.6rem;
@@ -216,64 +224,102 @@ section {
 }
 
 /* --- TIMELINE --- */
-.timeline-wrapper {
-    position: relative;
-    padding: var(--space-md) 0;
+#timeline h2 {
+  text-align: center;
 }
 
-.timeline-wrapper::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 0.2rem;
-    height: 100%;
-    background-color: var(--secondary);
-    transform: translateX(-50%);
+.timeline-line {
+  position: relative;
+  margin: var(--space-lg) auto;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
 
-.timeline-item {
-    position: relative;
-    width: 50%;
-    padding: var(--space-sm) var(--space-md);
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0.3rem;
+  height: 100%;
+  background-color: var(--secondary);
+  transform: translateX(-50%);
 }
 
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
+.timeline-card {
+  position: relative;
+  background-color: var(--primary);
+  border: 0.1rem solid var(--secondary);
+  border-radius: var(--border-radius);
+  padding: var(--space-md);
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.3);
 }
 
-.timeline-item:nth-child(even) {
-    left: 50%;
+.timeline-card h3 {
+  color: var(--tertiary);
+  margin-bottom: var(--space-xs);
 }
 
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    top: 2.8rem;
-    width: 1.6rem;
-    height: 1.6rem;
-    background-color: var(--tertiary);
-    border: 0.3rem solid var(--secondary);
-    border-radius: 50%;
-    z-index: 1;
+.timeline-footer {
+  margin-top: var(--space-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-base);
 }
 
-.timeline-item:nth-child(odd)::after {
-    right: -0.8rem;
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--border-radius-pill);
+  font-weight: 600;
+  gap: 0.6rem;
 }
 
-.timeline-item:nth-child(even)::after {
-    left: -0.8rem;
+.status-pill .dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.timeline-content {
-    padding: var(--space-sm);
-    background-color: rgba(3, 52, 110, 0.4);
-    border-radius: var(--border-radius);
+.status-pill.online {
+  background-color: var(--online-bg);
+  color: var(--online);
 }
-.timeline-content h3 { color: var(--tertiary); }
-.timeline-content p { margin: 0; }
+
+.status-pill.online .dot {
+  background-color: var(--online);
+}
+
+.status-pill.offline {
+  background-color: var(--offline-bg);
+  color: var(--offline);
+}
+
+.status-pill.offline .dot {
+  background-color: var(--offline);
+}
+
+.status-pill.ended {
+  background-color: var(--ended-bg);
+  color: var(--ended);
+}
+
+.status-pill.ended .dot {
+  background-color: var(--ended);
+}
+
+.timeline-card .date {
+  font-size: 1.4rem;
+  color: var(--text);
+}
+
 
 /* --- CARDS (Problem Statements & Prizes) --- */
 .card-grid {

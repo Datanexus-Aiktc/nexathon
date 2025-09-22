@@ -70,4 +70,47 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
+
+    // --- TIMELINE STATUS AUTO SWITCH ---
+    function setStatus(el, state) {
+      el.classList.remove('online', 'offline', 'ended');
+      el.classList.add(state);
+
+      if (state === 'online') {
+        el.innerHTML = '<span class="dot"></span> Online';
+      } else if (state === 'offline') {
+        el.innerHTML = '<span class="dot"></span> Offline';
+      } else {
+        el.innerHTML = '<span class="dot"></span> Ended';
+      }
+    }
+
+    const timelineCards = document.querySelectorAll('.timeline-card');
+    let latestOnlineIndex = -1;
+
+    timelineCards.forEach((card, index) => {
+      const dateStr = card.getAttribute('data-date');
+      if (!dateStr) return;
+
+      const eventDate = new Date(dateStr);
+      const now = new Date();
+      const status = card.querySelector('.status-pill');
+
+      if (now < eventDate) {
+        setStatus(status, 'offline');
+      } else {
+        setStatus(status, 'online');
+        latestOnlineIndex = index; // track the most recent active event
+      }
+    });
+
+    // Mark all earlier than latest as ended
+    if (latestOnlineIndex > -1) {
+      for (let i = 0; i < latestOnlineIndex; i++) {
+        const prevStatus = timelineCards[i].querySelector('.status-pill');
+        setStatus(prevStatus, 'ended');
+      }
+    }
+
+
 });
