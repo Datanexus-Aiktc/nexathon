@@ -1,45 +1,149 @@
-
 /* --- Mobile Navigation --- */
 @media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
+  .nav-toggle {
+    display: block;
+  }
 
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%; /* Initially off-screen */
-        width: 70%;
-        height: 100vh;
-        background-color: var(--primary);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: right var(--transition-speed) ease-in-out;
-    }
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* Initially off-screen */
+    width: 70%;
+    height: 100vh;
+    background-color: var(--primary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right var(--transition-speed) ease-in-out;
+  }
 
-    .nav-menu.active {
-        right: 0;
-    }
+  .nav-menu.active {
+    right: 0;
+  }
 
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-    }
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 
-/* Timeline on mobile */   
+/* Timeline on mobile */
 @media (max-width: 768px) {
   .timeline-line {
     padding: 0 var(--space-sm);
   }
+
   .timeline-card {
     text-align: left;
   }
+
   .timeline-footer {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-xs);
+  }
+}
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  #about .rotating-circles-container {
+    width: 35rem;
+    height: 35rem;
+  }
+
+  #about .center-circle {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  #about .center-text {
+    font-size: 1.4rem;
+  }
+
+  #about .rotating-container {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  #about .outer-circle {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  #about .circle-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-12rem) rotate(0deg);
+  }
+
+  #about .circle-2 {
+    transform: translate(-50%, -50%) rotate(72deg) translateY(-12rem) rotate(-72deg);
+  }
+
+  #about .circle-3 {
+    transform: translate(-50%, -50%) rotate(144deg) translateY(-12rem) rotate(-144deg);
+  }
+
+  #about .circle-4 {
+    transform: translate(-50%, -50%) rotate(216deg) translateY(-12rem) rotate(-216deg);
+  }
+
+  #about .circle-5 {
+    transform: translate(-50%, -50%) rotate(288deg) translateY(-12rem) rotate(-288deg);
+  }
+
+  #about .circle-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #about .rotating-circles-container {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  #about .center-circle {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  #about .center-text {
+    font-size: 1.2rem;
+  }
+
+  #about .rotating-container {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  #about .outer-circle {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  #about .circle-1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-10rem) rotate(0deg);
+  }
+
+  #about .circle-2 {
+    transform: translate(-50%, -50%) rotate(72deg) translateY(-10rem) rotate(-72deg);
+  }
+
+  #about .circle-3 {
+    transform: translate(-50%, -50%) rotate(144deg) translateY(-10rem) rotate(-144deg);
+  }
+
+  #about .circle-4 {
+    transform: translate(-50%, -50%) rotate(216deg) translateY(-10rem) rotate(-216deg);
+  }
+
+  #about .circle-5 {
+    transform: translate(-50%, -50%) rotate(288deg) translateY(-10rem) rotate(-288deg);
+  }
+
+  #about .circle-text {
+    font-size: 0.9rem;
   }
 }
