@@ -529,3 +529,16 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Info Box for Guidelines and Rules */
+.info-box {
+    background-color: var(--primary);
+    border: 0.2rem solid var(--secondary);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.4rem 1.2rem rgba(110, 172, 218, 0.15);
+    padding: var(--space-lg) var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+.info-box h2 {
+    color: var(--tertiary);
+}
