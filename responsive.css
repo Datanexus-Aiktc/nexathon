@@ -43,3 +43,49 @@
     gap: var(--space-xs);
   }
 }
+
+
+/* --- Prizes on Mobile --- */
+@media (max-width: 768px) {
+  .prize-card.winner {
+    flex: 1 1 auto;
+    max-width: 90%;
+  }
+
+  .prizes-bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: var(--space-sm);
+  }
+
+  .prizes-bottom .prize-card {
+    flex: 1 1 auto;
+    min-height: 7rem;
+  }
+  
+  .prize-rank {
+    font-size: 5rem;
+  }
+  
+  .prize-card h3 {
+    font-size: 2rem;
+  }
+  
+  .prize-card p {
+    font-size: 1.5rem;
+  }
+
+  .prize-card.winner .prize-rank {
+    font-size: 8rem;
+  }
+
+  .prize-card.winner h3 {
+    font-size: 4rem;
+  }
+
+  .prize-card.winner p {
+    font-size: 2.5rem;
+  }
+}
+
