@@ -70,11 +70,15 @@
     justify-content: center;
     flex-wrap: nowrap;
     gap: var(--space-sm);
+    flex-direction: column;
+    align-items: center;
   }
 
   .prizes-bottom .prize-card {
     flex: 1 1 auto;
     min-height: 7rem;
+    width: 80%;
+    margin-bottom: var(--space-md);
   }
   
   .prize-rank {
@@ -101,6 +105,7 @@
     font-size: 2.5rem;
   }
 }
+
 
 /* --- Domain Modal Mobile --- */
 @media (max-width: 768px) {

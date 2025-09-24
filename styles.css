@@ -22,6 +22,14 @@
     --ended: #999999;
     --ended-bg: rgba(153, 153, 153, 0.15);
 
+    /* Prizes */
+    --gold: #FFD700;    
+    --gold-dark: #E6C200;
+    --silver: #C0C0C0;  
+    --silver-dark: #A8A8A8;
+    --bronze: #CD7F32;  
+    --bronze-dark: #B2692D;
+
     /* Spacing Scale (based on 1rem = 10px) */
     --space-xs: 0.8rem;
     --space-sm: 1.6rem;
@@ -439,7 +447,8 @@ section {
 
 .prize-card {
     background-color: var(--primary);
-    border: 0.1rem solid var(--secondary);
+    border: none;
+    /* border: 0.1rem solid var(--secondary); */
     border-radius: var(--border-radius);
     padding: var(--space-md);
     text-align: center;
@@ -477,11 +486,7 @@ section {
 /* Winner styling with enhanced effects */
 .prize-card.winner {
     width: 60%;
-    background: linear-gradient(145deg,
-            #FFD700 0%,
-            #FFA500 30%,
-            var(--secondary) 70%,
-            var(--primary) 100%);
+    background: linear-gradient(155deg, var(--gold) 20%, var(--primary) 70%);
     color: var(--background);
     border: none;
     position: relative;
@@ -504,19 +509,13 @@ section {
 }
 
 .prize-card.second {
-    background: linear-gradient(145deg,
-            #C0C0C0 0%,
-            #E5E5E5 30%,
-            var(--primary) 70%);
-    border: 0.2rem solid #C0C0C0;
+    background: linear-gradient(155deg, var(--silver) 20% , var(--primary) 70%);
+    /* border: 0.2rem solid var(--silver-dark); */
 }
 
 .prize-card.third {
-    background: linear-gradient(145deg,
-            #CD7F32 0%,
-            #DAA520 30%,
-            var(--primary) 70%);
-    border: 0.2rem solid #CD7F32;
+    background: linear-gradient(155deg, var(--bronze) 20% , var(--primary) 70%);
+    /* border: 0.2rem solid var(--bronze-dark); */
 }
 
 /* Enhanced prize rank with modern icons */
@@ -528,7 +527,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: bounce 2s ease-in-out infinite;
+    /* animation: bounce 2s ease-in-out infinite; */
 }
 
 @keyframes bounce {
@@ -588,19 +587,6 @@ section {
     z-index: 2;
 }
 
-/* Enhanced prize badges */
-.prize-badge {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 2rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-top: var(--space-sm);
-    border: 0.1rem solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    z-index: 2;
-}
-
 .winner .prize-badge {
     background: rgba(255, 255, 255, 0.9);
     color: var(--primary);
@@ -616,26 +602,6 @@ section {
     border-color: rgba(205, 127, 50, 0.4);
 }
 
-/* Responsive enhancements */
-@media (max-width: 768px) {
-    .prizes-bottom {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .prize-card.winner {
-        width: 90%;
-    }
-
-    .prizes-bottom .prize-card {
-        width: 80%;
-        margin-bottom: var(--space-md);
-    }
-
-    .prize-rank {
-        font-size: 4rem;
-    }
-}
 
 
 /* --- GUIDELINES --- */
