@@ -209,29 +209,33 @@ const domainDescriptions = {
     }
 
     function showDomainInfo(domain) {
-        const info = domainDescriptions[domain];
-        if (!info) return;
+  const info = domainDescriptions[domain];
+  if (!info) return;
 
-        // Animate modal appearance
-        domainModal.style.display = 'flex';
-        setTimeout(() => {
-            domainModal.classList.add('active');
-        }, 10);
+  // Animate modal appearance
+  domainModal.style.display = 'flex';
+  setTimeout(() => {
+    domainModal.classList.add('active');
+  }, 10);
 
-        // Set content with fade-in effect
-        modalTitle.textContent = info.title;
-        domainContent.innerHTML = `
-            <div class="domain-description">${info.description}</div>
-            <h4 style="color: var(--tertiary); text-align: center; margin-bottom: var(--space-md);">Key Focus Areas</h4>
-            <ul class="domain-features">
-                ${info.features.map(feature => `<li>${feature}</li>`).join('')}
-            </ul>
-        `;
+  // Set content
+  modalTitle.textContent = info.title;
+  domainContent.innerHTML = `
+    <div class="domain-description">${info.description}</div>
+    <h4 style="color: var(--tertiary); text-align: center; margin-bottom: var(--space-md);">Key Focus Areas</h4>
+    <ul class="domain-features">
+      ${info.features.map(feature => `<li>${feature}</li>`).join('')}
+    </ul>
+    <div style="text-align:center; margin-top: var(--space-lg);">
+      <a href="https://forms.gle/ZiBoX2UBFCsjp9uf7" class="btn btn-primary">Register Now</a>
+    </div>
+  `;
 
-        // Prevent background scrolling
-        document.body.style.overflow = 'hidden';
-        document.addEventListener('touchmove', preventScroll, { passive: false });
-    }
+  // Prevent background scroll
+  document.body.style.overflow = 'hidden';
+  document.addEventListener('touchmove', preventScroll, { passive: false });
+}
+
 
     function closeDomainModal() {
         domainModal.classList.remove('active');

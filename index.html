@@ -221,125 +221,84 @@
         </div>
       </section>
 
-      <!--- Domain Section -->
-      <<!--- Domain Section -->
-      <section id="domains" class="container reveal-on-scroll">
-        <h2>Domains</h2>
-        <p class="section-subtitle">Choose Your Challenge</p>
+<!--- Domain Section -->
+<section id="domains" class="container reveal-on-scroll">
+  <h2>Domains</h2>
+  <p class="section-subtitle-text">Choose your challenge</p>
 
-        <div class="domains-grid">
-          <!-- Row 1 -->
-          <div class="domain-card" data-domain="healthcare">
-            <div class="domain-image">
-              <img
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=60"
-                alt="Healthcare Domain"
-              />
-              <div class="domain-overlay">
-                <h3>Healthcare</h3>
-                <p>Innovating Patient Care</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="domain-card" data-domain="fintech">
-            <div class="domain-image">
-              <img
-                src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=60"
-                alt="Fintech Domain"
-              />
-              <div class="domain-overlay">
-                <h3>Fintech</h3>
-                <p>Financial Technology</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 2 -->
-          <div class="domain-card" data-domain="education">
-            <div class="domain-image">
-              <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=60"
-                alt="Education Domain"
-              />
-              <div class="domain-overlay">
-                <h3>Education</h3>
-                <p>Learning Reimagined</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="domain-card" data-domain="agriculture">
-            <div class="domain-image">
-              <img
-                src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&auto=format&fit=crop&q=60"
-                alt="Agriculture Domain"
-              />
-              <div class="domain-overlay">
-                <h3>Agriculture</h3>
-                <p>Sustainable Farming</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 3 -->
-          <div class="domain-card domain-card-center" data-domain="innovation">
-            <div class="domain-image">
-              <img
-                src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&auto=format&fit=crop&q=60"
-                alt="Open Innovation Domain"
-              />
-              <div class="domain-overlay">
-                <h3>Open Innovation</h3>
-                <p>Boundary-Pushing Solutions</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Domain Modal -->
-      <div id="domain-modal" class="domain-modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 id="modal-domain-title"></h3>
-            <button id="close-modal" class="close-btn" aria-label="Close">
-              &times;
-            </button>
-          </div>
-          <div class="modal-body" id="domain-content">
-            <!-- JS will inject description + features here -->
-          </div>
+  <div class="domains-grid">
+    <!-- Healthcare -->
+    <div class="domain-card" data-domain="healthcare">
+      <div class="domain-image">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=60" alt="Healthcare Domain">
+        <div class="domain-overlay always-visible">
+          <h3>Healthcare</h3>
+          <p>Innovating Patient Care</p>
         </div>
       </div>
+    </div>
 
-      <!-- prizes section -->
-      <section id="prizes" class="container reveal-on-scroll">
-        <h1>Prizes</h1>
-
-        <div class="prizes-top">
-          <div class="prize-card winner">
-            <div class="prize-rank">
-              <!-- Using Heroicons CDN for winner trophy -->
-              <svg
-                class="trophy-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 0 0-.584.859 6.753 6.753 0 0 0 6.138 5.6 6.73 6.73 0 0 0 2.743 1.346A6.707 6.707 0 0 1 9.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 0 0-2.25 2.25c0 .414.336.75.75.75h15a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 0 1-1.112-3.173 6.73 6.73 0 0 0 2.743-1.347 6.753 6.753 0 0 0 6.139-5.6.75.75 0 0 0-.585-.858 47.077 47.077 0 0 0-3.07-.543V2.62a.75.75 0 0 0-.658-.744 49.22 49.22 0 0 0-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 0 0-.657.744Zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 0 1 3.16 5.337a45.6 45.6 0 0 1 2.006-.343v.256Zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 0 1-2.863 3.207 6.72 6.72 0 0 0 .857-3.294Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <h3>Winner</h3>
-            <p>₹15,000</p>
-            <div class="prize-badge">🏆 Champion</div>
-          </div>
+    <!-- Fintech -->
+    <div class="domain-card" data-domain="fintech">
+      <div class="domain-image">
+        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=60" alt="Fintech Domain">
+        <div class="domain-overlay always-visible">
+          <h3>Fintech</h3>
+          <p>Financial Technology</p>
         </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="domain-card" data-domain="education">
+      <div class="domain-image">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=60" alt="Education Domain">
+        <div class="domain-overlay always-visible">
+          <h3>Education</h3>
+          <p>Learning Reimagined</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agriculture -->
+    <div class="domain-card" data-domain="agriculture">
+      <div class="domain-image">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&auto=format&fit=crop&q=60" alt="Agriculture Domain">
+        <div class="domain-overlay always-visible">
+          <h3>Agriculture</h3>
+          <p>Sustainable Farming</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Open Innovation -->
+    <div class="domain-card domain-card-center" data-domain="innovation">
+      <div class="domain-image">
+        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&auto=format&fit=crop&q=60" alt="Open Innovation Domain">
+        <div class="domain-overlay always-visible">
+          <h3>Open Innovation</h3>
+          <p>Boundary-Pushing Solutions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Domain Modal -->
+<div id="domain-modal" class="domain-modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="modal-domain-title"></h3>
+      <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body" id="domain-content">
+      <!-- JS will inject description here -->
+    </div>
+  </div>
+</div>
+
+
 
         <div class="prizes-bottom">
           <div class="prize-card second">
