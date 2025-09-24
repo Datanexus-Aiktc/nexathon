@@ -5,7 +5,6 @@
     .nav-toggle {
         display: block;
     }
-
     .nav-menu {
         position: fixed;
         top: 0;
@@ -29,6 +28,19 @@
     }
 }
 
+@media (max-width: 500px) {
+    .hero-logos{
+
+    }
+    .s4ds-logo{
+    width: 9rem;
+    height: auto;    
+    }
+    .club-logo{
+        width: 15rem;
+        height: auto;
+    }
+}
 
 /* Timeline on mobile */   
 @media (max-width: 768px) {
