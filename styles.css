@@ -161,55 +161,21 @@ section {
 .btn:focus-visible {
     border-radius: var(--border-radius-pill);
 }
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: radial-gradient(circle at 50% 50%, var(--primary), var(--bg) 70%);
-    padding: var(--space-md);
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero-title {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    margin: var(--space-xs) 0;
-}
-
-.hero-subtitle {
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: var(--font-base);
-    margin: 0;
-}
-
-.hero-cta {
-    margin-top: var(--space-md);
-}
-
+/* --- NAVBAR --- */
 .navbar {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    padding: var(--space-sm) 0;
+    padding: var(--space-xs) 0;
     z-index: 100;
+    background-color: var(--primary);
 }
 
 .nav-container {
-    max-width: var(--container-width);
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-xs);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -256,6 +222,58 @@ section {
     color: var(--secondary);
     text-decoration: none;
 }
+
+/* --- HERO SECTION --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background: radial-gradient(circle at 50% 50%, var(--primary), var(--bg) 70%);
+    padding: var(--space-md);
+}
+.hero-logos{
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    translate: -4rem;
+}
+.s4ds-logo{
+    width: 12rem;
+    height: auto;    
+}
+.club-logo{
+    width: 22.3rem;
+    height: auto;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin: var(--space-xs) 0;
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: var(--font-base);
+    margin: 0;
+}
+
+.hero-cta {
+    margin-top: var(--space-md);
+}
+
 
 /* --- TIMELINE --- */
 #timeline h2 {
