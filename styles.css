@@ -705,7 +705,37 @@ section {
 .footer-bottom p {
     margin: 0;
 }
+/* --- MAP --- */
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
+.footer-column.venue {
+  flex: 2;   /* 2x space lega */
+  min-width: 350px;
+}
+
+.footer-column.follow {
+  flex: 1;   /* 1x space lega */
+  min-width: 200px;
+}
+
+.map-container {
+  width: 100%;
+  border-radius: 2.25rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2); 
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;   /* parent container ke hisaab se adjust hoga */
+  min-height: 18rem;  /* responsive ke liye */
+  border: 0;
+}
 /* --- ANIMATIONS --- */
 .reveal-on-scroll {
     opacity: 0;
