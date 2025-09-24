@@ -1,371 +1,617 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nexathon</title>
-    <meta name="description" content="Join Nexathon, a 24-hour data science and machine learning hackathon. Solve real-world problems, win exciting prizes, and showcase your skills.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="responsive.css">
+    <meta
+      name="description"
+      content="Join Nexathon, a 24-hour data science and machine learning hackathon. Solve real-world problems, win exciting prizes, and showcase your skills."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <header class="hero">
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="#" class="nav-logo">
-                    <svg width="2.4rem" height="2.4rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--tertiary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M2 17L12 22L22 17" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M2 12L12 17L22 12" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>NEXATHON</span>
-                </a>
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="#" class="nav-logo">
+            <svg
+              width="2.4rem"
+              height="2.4rem"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2L2 7L12 12L22 7L12 2Z"
+                stroke="var(--tertiary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 17L12 22L22 17"
+                stroke="var(--secondary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 12L12 17L22 12"
+                stroke="var(--secondary)"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>NEXATHON</span>
+          </a>
 
-                <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open menu">
-                    <svg class="hamburger-icon" viewBox="0 0 100 80" width="24" height="24" fill="var(--text)">
-                        <rect width="100" height="15" rx="8"></rect>
-                        <rect y="30" width="100" height="15" rx="8"></rect>
-                        <rect y="60" width="100" height="15" rx="8"></rect>
-                    </svg>
-                </button>
-                
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#timeline">Timeline</a></li>
-                        <li><a href="#problems">Problems</a></li>
-                        <li><a href="#rules">Rules</a></li>
-                    </ul>
-                    <a href="#register" class="btn btn-primary">Register Now</a>
-                </div>
-            </div>
-        </nav>
+          <button
+            class="nav-toggle"
+            aria-controls="nav-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <svg
+              class="hamburger-icon"
+              viewBox="0 0 100 80"
+              width="24"
+              height="24"
+              fill="var(--text)"
+            >
+              <rect width="100" height="15" rx="8"></rect>
+              <rect y="30" width="100" height="15" rx="8"></rect>
+              <rect y="60" width="100" height="15" rx="8"></rect>
+            </svg>
+          </button>
 
-        <div class="hero-content">
-            <p class="hero-subtitle">Anjuman-I-Islams's Kalsekar technical Campus</p>
-            <p class="hero-subtitle">Datanexus Club and S4DS presents</p>
-            <h1 class="hero-title">
-                <svg width="4.8rem" height="4.8rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="var(--tertiary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 17L12 22L22 17" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                NEXATHON
-            </h1>
-            <p>The Future of Data, Forged in a Day.</p>
-            <a href="#register" class="btn btn-secondary hero-cta">Join The Challenge</a>
+          <div class="nav-menu" id="nav-menu">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#timeline">Timeline</a></li>
+              <li><a href="#domains">Domains</a></li>
+              <li><a href="#rules">Rules</a></li>
+            </ul>
+            <a href="#register" class="btn btn-primary">Register Now</a>
+          </div>
         </div>
+      </nav>
+
+      <div class="hero-content">
+        <p class="hero-subtitle">
+          Anjuman-I-Islams's Kalsekar technical Campus
+        </p>
+        <p class="hero-subtitle">Datanexus Club and S4DS presents</p>
+        <h1 class="hero-title">
+          <svg
+            width="4.8rem"
+            height="4.8rem"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2L2 7L12 12L22 7L12 2Z"
+              stroke="var(--tertiary)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2 17L12 22L22 17"
+              stroke="var(--secondary)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2 12L12 17L22 12"
+              stroke="var(--secondary)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          NEXATHON
+        </h1>
+        <p>The Future of Data, Forged in a Day.</p>
+        <a href="#register" class="btn btn-secondary hero-cta"
+          >Join The Challenge</a
+        >
+      </div>
     </header>
 
     <main>
-        <section id="about" class="container reveal-on-scroll">
-            <h2>What is Nexathon?</h2>
-            <p>Nexathon is an intensive data science and machine learning competition where innovators, developers, and data enthusiasts collaborate to solve challenging real-world problems. It's a platform to learn, build, and showcase your skills in a competitive yet supportive environment.</p>
-            <ul>
-                <li><strong>Focus:</strong> Data Science, Machine Learning, and AI.</li>
-                <li><strong>Goal:</strong> Create an impact by impementing data-driven solutions.</li>
-                <li><strong>Datasets:</strong> Work with unique, large-scale datasets provided by our partners.</li>
-            </ul>
-        </section>
+      <section id="about" class="container reveal-on-scroll">
+        <h2>What is Nexathon?</h2>
+        <p>
+          Nexathon is an intensive data science and machine learning competition
+          where innovators, developers, and data enthusiasts collaborate to
+          solve challenging real-world problems. It's a platform to learn,
+          build, and showcase your skills in a competitive yet supportive
+          environment.
+        </p>
+        <ul>
+          <li>
+            <strong>Focus:</strong> Data Science, Machine Learning, and AI.
+          </li>
+          <li>
+            <strong>Goal:</strong> Create an impact by impementing data-driven
+            solutions.
+          </li>
+          <li>
+            <strong>Datasets:</strong> Work with unique, large-scale datasets
+            provided by our partners.
+          </li>
+        </ul>
+      </section>
 
-        <section id="timeline" class="container reveal-on-scroll">
-          <h2>Event Timeline</h2>
-          <div class="timeline-line">
-            <!---                           TIME="yyyy-mm-ddT24HourTime+timezone"   -->                                                
-            <div class="timeline-card" data-date="2025-09-24T00:00:00+05:30">
-              <h3>Registrations Open</h3>
-              <p>Team registrations open for Nexathon. Gather your squad and sign up!</p>
-              <div class="timeline-footer">
-                <span class="status-pill offline"><span class="dot"></span> Offline</span>
-                <span class="date">September 24, 2025</span>
-              </div>
+      <section id="timeline" class="container reveal-on-scroll">
+        <h2>Event Timeline</h2>
+        <div class="timeline-line">
+          <!---                           TIME="yyyy-mm-ddT24HourTime+timezone"   -->
+          <div class="timeline-card" data-date="2025-09-24T00:00:00+05:30">
+            <h3>Registrations Open</h3>
+            <p>
+              Team registrations open for Nexathon. Gather your squad and sign
+              up!
+            </p>
+            <div class="timeline-footer">
+              <span class="status-pill offline"
+                ><span class="dot"></span> Offline</span
+              >
+              <span class="date">September 24, 2025</span>
             </div>
-        
-            <div class="timeline-card" data-date="2025-10-02T00:00:00+05:30">
-              <h3>Registrations Close</h3>
-              <p>Deadline to complete your team registration.</p>
-              <div class="timeline-footer">
-                <span class="status-pill offline"><span class="dot"></span> Offline</span>
-                <span class="date">October 2, 2025</span>
-              </div>
-            </div>
-        
-            <div class="timeline-card" data-date="2025-10-03T00:00:00+05:30">
-              <h3>Round 1 (PPT Round)</h3>
-              <p>Teams present their solutions via PPT.</p>
-              <div class="timeline-footer">
-                <span class="status-pill offline"><span class="dot"></span> Offline</span>
-                <span class="date">October 3 - 8, 2025</span>
-              </div>
-            </div>
-        
-            <div class="timeline-card" data-date="2025-10-10T00:00:00+05:30">
-              <h3>Results of Round 1</h3>
-              <p>Top teams announced for the final round.</p>
-              <div class="timeline-footer">
-                <span class="status-pill offline"><span class="dot"></span> Offline</span>
-                <span class="date">October 10, 2025</span>
-              </div>
-            </div>
-        
-            <div class="timeline-card" data-date="2025-10-18T00:00:00+05:30">
-              <h3>Final Round</h3>
-              <p>Final presentations and judging.</p>
-              <div class="timeline-footer">
-                <span class="status-pill offline"><span class="dot"></span> Offline</span>
-                <span class="date">October 18, 2025</span>
-              </div>
-            </div>
-        
           </div>
-        </section>
-        
-        <!--- Domain Section -->
-        <<!--- Domain Section -->
-        <section id="domains" class="container reveal-on-scroll">
-            <h2>Domains</h2>
-            <p class="section-subtitle">Choose Your Challenge</p>
 
-            <div class="domains-grid">
-            <!-- Row 1 -->
-                <div class="domain-card" data-domain="healthcare">
-                    <div class="domain-image">
-                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=60" alt="Healthcare Domain">
-                        <div class="domain-overlay">
-                            <h3>Healthcare</h3>
-                            <p>Innovating Patient Care</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="domain-card" data-domain="fintech">
-                    <div class="domain-image">
-                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=60" alt="Fintech Domain">
-                        <div class="domain-overlay">
-                        <h3>Fintech</h3>
-                        <p>Financial Technology</p>
-                    </div>
-                </div>
+          <div class="timeline-card" data-date="2025-10-02T00:00:00+05:30">
+            <h3>Registrations Close</h3>
+            <p>Deadline to complete your team registration.</p>
+            <div class="timeline-footer">
+              <span class="status-pill offline"
+                ><span class="dot"></span> Offline</span
+              >
+              <span class="date">October 2, 2025</span>
             </div>
+          </div>
 
-             <!-- Row 2 -->
-            <div class="domain-card" data-domain="education">
-                <div class="domain-image">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=60" alt="Education Domain">
-                    <div class="domain-overlay">
-                        <h3>Education</h3>
-                        <p>Learning Reimagined</p>
-                    </div>
-                </div>
+          <div class="timeline-card" data-date="2025-10-03T00:00:00+05:30">
+            <h3>Round 1 (PPT Round)</h3>
+            <p>Teams present their solutions via PPT.</p>
+            <div class="timeline-footer">
+              <span class="status-pill offline"
+                ><span class="dot"></span> Offline</span
+              >
+              <span class="date">October 3 - 8, 2025</span>
             </div>
+          </div>
 
-            <div class="domain-card" data-domain="agriculture">
-                <div class="domain-image">
-                    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&auto=format&fit=crop&q=60" alt="Agriculture Domain">
-                    <div class="domain-overlay">
-                        <h3>Agriculture</h3>
-                        <p>Sustainable Farming</p>
-                    </div>
-                </div>
+          <div class="timeline-card" data-date="2025-10-10T00:00:00+05:30">
+            <h3>Results of Round 1</h3>
+            <p>Top teams announced for the final round.</p>
+            <div class="timeline-footer">
+              <span class="status-pill offline"
+                ><span class="dot"></span> Offline</span
+              >
+              <span class="date">October 10, 2025</span>
             </div>
+          </div>
 
-            <!-- Row 3 -->
-            <div class="domain-card domain-card-center" data-domain="innovation">
-                <div class="domain-image">
-                    <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&auto=format&fit=crop&q=60" alt="Open Innovation Domain">
-                    <div class="domain-overlay">
-                        <h3>Open Innovation</h3>
-                        <p>Boundary-Pushing Solutions</p>
-                    </div>
-                </div>
+          <div class="timeline-card" data-date="2025-10-18T00:00:00+05:30">
+            <h3>Final Round</h3>
+            <p>Final presentations and judging.</p>
+            <div class="timeline-footer">
+              <span class="status-pill offline"
+                ><span class="dot"></span> Offline</span
+              >
+              <span class="date">October 18, 2025</span>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Domain Modal -->
-    <div id="domain-modal" class="domain-modal">
+      <!--- Domain Section -->
+      <<!--- Domain Section -->
+      <section id="domains" class="container reveal-on-scroll">
+        <h2>Domains</h2>
+        <p class="section-subtitle">Choose Your Challenge</p>
+
+        <div class="domains-grid">
+          <!-- Row 1 -->
+          <div class="domain-card" data-domain="healthcare">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=60"
+                alt="Healthcare Domain"
+              />
+              <div class="domain-overlay">
+                <h3>Healthcare</h3>
+                <p>Innovating Patient Care</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="domain-card" data-domain="fintech">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=60"
+                alt="Fintech Domain"
+              />
+              <div class="domain-overlay">
+                <h3>Fintech</h3>
+                <p>Financial Technology</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="domain-card" data-domain="education">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=60"
+                alt="Education Domain"
+              />
+              <div class="domain-overlay">
+                <h3>Education</h3>
+                <p>Learning Reimagined</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="domain-card" data-domain="agriculture">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&auto=format&fit=crop&q=60"
+                alt="Agriculture Domain"
+              />
+              <div class="domain-overlay">
+                <h3>Agriculture</h3>
+                <p>Sustainable Farming</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="domain-card domain-card-center" data-domain="innovation">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&auto=format&fit=crop&q=60"
+                alt="Open Innovation Domain"
+              />
+              <div class="domain-overlay">
+                <h3>Open Innovation</h3>
+                <p>Boundary-Pushing Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Domain Modal -->
+      <div id="domain-modal" class="domain-modal">
         <div class="modal-overlay"></div>
         <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modal-domain-title"></h3>
-                <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
-            </div>
-            <div class="modal-body" id="domain-content">
-              <!-- JS will inject description + features here -->
-            </div>
+          <div class="modal-header">
+            <h3 id="modal-domain-title"></h3>
+            <button id="close-modal" class="close-btn" aria-label="Close">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body" id="domain-content">
+            <!-- JS will inject description + features here -->
+          </div>
         </div>
-    </div>
+      </div>
 
+      <!-- prizes section -->
+      <section id="prizes" class="container reveal-on-scroll">
+        <h1>Prizes</h1>
 
-        <section id="prizes" class="container reveal-on-scroll">
-          <h1>Prizes</h1>
+        <div class="prizes-top">
+          <div class="prize-card winner">
+            <div class="prize-rank">
+              <!-- Using Heroicons CDN for winner trophy -->
+              <svg
+                class="trophy-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 0 0-.584.859 6.753 6.753 0 0 0 6.138 5.6 6.73 6.73 0 0 0 2.743 1.346A6.707 6.707 0 0 1 9.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 0 0-2.25 2.25c0 .414.336.75.75.75h15a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 0 1-1.112-3.173 6.73 6.73 0 0 0 2.743-1.347 6.753 6.753 0 0 0 6.139-5.6.75.75 0 0 0-.585-.858 47.077 47.077 0 0 0-3.07-.543V2.62a.75.75 0 0 0-.658-.744 49.22 49.22 0 0 0-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 0 0-.657.744Zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 0 1 3.16 5.337a45.6 45.6 0 0 1 2.006-.343v.256Zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 0 1-2.863 3.207 6.72 6.72 0 0 0 .857-3.294Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <h3>Winner</h3>
+            <p>₹15,000</p>
+            <div class="prize-badge">🏆 Champion</div>
+          </div>
+        </div>
 
-          <div class="prizes-top">
-            <div class="prize-card winner">
-              <div class="prize-rank">🏆</div>
-              <h3>Winner</h3>
-              <p>₹20,000</p>
+        <div class="prizes-bottom">
+          <div class="prize-card second">
+            <div class="prize-rank">
+              <!-- Using Font Awesome for medals -->
+              <i class="fas fa-medal medal-icon silver"></i>
+            </div>
+            <h3>1st Runner Up</h3>
+            <p>₹10,000</p>
+            <div class="prize-badge">🥈 Excellence</div>
+          </div>
+
+          <div class="prize-card third">
+            <div class="prize-rank">
+              <i class="fas fa-medal medal-icon bronze"></i>
+            </div>
+            <h3>2nd Runner Up</h3>
+            <p>₹5,000</p>
+            <div class="prize-badge">🥉 Achievement</div>
+          </div>
+        </div>
+      </section>
+      <!-- guidelines section -->
+      <section id="guidelines" class="container reveal-on-scroll info-box">
+        <h2>Submission Guidelines</h2>
+        <ol class="guidelines-list">
+          <li>
+            Teams must have 2 to 4 members. Solo participation is not allowed.
+          </li>
+          <li>
+            Your project must be related to Data Science technologies such as
+            Machine Learning, Artificial Intelligence, Power BI, R, or similar
+            fields.
+          </li>
+          <li>Your Project must be completed before the deadline.</li>
+          <li>
+            Submit your project as a link to a public Git repository (GitHub,
+            GitLab, etc.).
+          </li>
+          <li>
+            Judging criteria: Technical Accuracy, Creativity, Scalability, and
+            Clarity of Presentation.
+          </li>
+          <li>
+            Any misappropriate behavior will lead to immediate disqualification.
+          </li>
+        </ol>
+      </section>
+
+      <section id="rules" class="container reveal-on-scroll info-box">
+        <h2>Rules of Nexathon</h2>
+        <ul>
+          <li>
+            All participants must follow the event’s Code of Conduct to ensure a
+            safe and respectful environment.
+          </li>
+          <li>
+            All intellectual property created during the hackathon belongs to
+            the participants.
+          </li>
+          <li>You should not exceed the time of your presentation.</li>
+          <li>
+            Teams must be present at the venue for the entire duration of the
+            hackathon.
+          </li>
+          <li>
+            All submissions must be made before the official deadline. Late
+            entries will not be accepted.
+          </li>
+        </ul>
+      </section>
+
+      <section id="faq" class="container reveal-on-scroll">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <h3>
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq1-answer"
+              >
+                Who is eligible to participate?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq1-answer" class="faq-answer" role="region" hidden>
+              <p>
+                Nexathon is open to all university students, recent graduates,
+                and data science enthusiasts over the age of 18.
+              </p>
             </div>
           </div>
-      
-          <div class="prizes-bottom">
-            <div class="prize-card second">
-              <div class="prize-rank">🥈</div>
-              <h3>1st Runner Up</h3>
-              <p>₹10,000</p>
-            </div>
-        
-            <div class="prize-card">
-              <div class="prize-rank">🥉</div>
-              <h3>2nd Runner Up</h3>
-              <p>₹5,000</p>
+          <div class="faq-item">
+            <h3>
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq2-answer"
+              >
+                Is there a registration fee?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq2-answer" class="faq-answer" role="region" hidden>
+              <p>
+                No, Nexathon is completely free for all accepted participants.
+              </p>
             </div>
           </div>
-        </section>
-
-
-        <section id="guidelines" class="container reveal-on-scroll info-box">
-            <h2>Submission Guidelines</h2>
-            <ol class="guidelines-list">
-                <li>Teams must have 2 to 4 members. Solo participation is not allowed.</li>
-                <li>Your project must be related to Data Science technologies such as Machine Learning, Artificial Intelligence, Power BI, R, or similar fields.</li>
-                <li>All code, documentation (README), and a short demo video must be submitted before the deadline.</li>
-                <li>Submit your project as a link to a public Git repository (GitHub, GitLab, etc.).</li>
-                <li>Judging criteria: Technical Accuracy, Creativity, Scalability, and Clarity of Presentation.</li>
-                <li>Any misappropriate behavior will lead to immediate disqualification.</li>
-            </ol>
-        </section>
-
-        <section id="rules" class="container reveal-on-scroll info-box">
-            <h2>Rules of Nexathon</h2>
-            <ul>
-                <li>All participants must follow the event’s Code of Conduct to ensure a safe and respectful environment.</li>
-                <li>All intellectual property created during the hackathon belongs to the participants.</li>
-                <li>Plagiarism or use of code not written during the event (except libraries) will result in immediate disqualification.</li>
-                <li>Teams must be present at the venue for the entire duration of the hackathon.</li>
-                <li>All submissions must be made before the official deadline. Late entries will not be accepted.</li>
-            </ul>
-        </section>
-
-        <section id="faq" class="container reveal-on-scroll">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <h3>
-                        <button class="faq-toggle" aria-expanded="false" aria-controls="faq1-answer">
-                            Who is eligible to participate?
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div id="faq1-answer" class="faq-answer" role="region" hidden>
-                        <p>Nexathon is open to all university students, recent graduates, and data science enthusiasts over the age of 18.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <h3>
-                        <button class="faq-toggle" aria-expanded="false" aria-controls="faq2-answer">
-                            Is there a registration fee?
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div id="faq2-answer" class="faq-answer" role="region" hidden>
-                        <p>No, Nexathon is completely free for all accepted participants.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <h3>
-                        <button class="faq-toggle" aria-expanded="false" aria-controls="faq3-answer">
-                            What is the maximum team size?
-                             <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div id="faq3-answer" class="faq-answer" role="region" hidden>
-                        <p>You can form teams of up to 4 members. You can also participate individually.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <h3>
-                        <button class="faq-toggle" aria-expanded="false" aria-controls="faq4-answer">
-                            What kind of datasets will be provided?
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div id="faq4-answer" class="faq-answer" role="region" hidden>
-                        <p>We will provide large, anonymized, and cleaned datasets from various domains like finance, healthcare, and urban planning.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <h3>
-                        <button class="faq-toggle" aria-expanded="false" aria-controls="faq5-answer">
-                            Can I use pre-trained models?
-                             <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div id="faq5-answer" class="faq-answer" role="region" hidden>
-                        <p>Yes, the use of publicly available, pre-trained models is allowed. However, the core logic and fine-tuning must be done during the hackathon.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <h3>
-                        <button class="faq-toggle" aria-expanded="false" aria-controls="faq6-answer">
-                            What do I need to bring?
-                             <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                    </h3>
-                    <div id="faq6-answer" class="faq-answer" role="region" hidden>
-                        <p>Just your laptop, your enthusiasm, and a collaborative spirit! We will provide the data, platform, and mentorship.</p>
-                    </div>
-                </div>
+          <div class="faq-item">
+            <h3>
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq3-answer"
+              >
+                What is the maximum team size?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq3-answer" class="faq-answer" role="region" hidden>
+              <p>
+                You can form teams of up to 4 members. You can also participate
+                individually.
+              </p>
             </div>
-        </section>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq4-answer"
+              >
+                What kind of datasets will be provided?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq4-answer" class="faq-answer" role="region" hidden>
+              <p>
+                We will provide large, anonymized, and cleaned datasets from
+                various domains like finance, healthcare, and urban planning.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq5-answer"
+              >
+                Can I use pre-trained models?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq5-answer" class="faq-answer" role="region" hidden>
+              <p>
+                Yes, the use of publicly available, pre-trained models is
+                allowed. However, the core logic and fine-tuning must be done
+                during the hackathon.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button
+                class="faq-toggle"
+                aria-expanded="false"
+                aria-controls="faq6-answer"
+              >
+                What do I need to bring?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div id="faq6-answer" class="faq-answer" role="region" hidden>
+              <p>
+                Just your laptop, your enthusiasm, and a collaborative spirit!
+                We will provide the data, platform, and mentorship.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-column">
-                <h4>Contact Us</h4>
-                <p>
-                    <strong>Mueez Hajwani</strong><br>
-                    President, DataNexus Club<br>
-                    <a href="mailto:contact1@example.com">23ds37@aiktc.ac.in</a><br>
-                    +91-XXXXX-XXXXX
-                </p>
-                <p>
-                    <strong>Sana Zakir Shaikh</strong><br>
-                    Technical head, DataNexus Club<br>
-                    <a href="mailto:contact2@example.com">23ds15@aiktc.ac.in</a><br>
-                    +91-XXXXX-XXXXX
-                </p>
-            </div>
-            <div class="footer-column">
-                <h4>Venue</h4>
-                <address>
-                    Anjuman-I-Islams's Kalsekar technical Campus<br>
-                    [Street Address]<br>
-                    [City, State, Pincode]
-                </address>
-            </div>
-            <div class="footer-column">
-                <h4>Follow Us</h4>
-                <ul class="social-links">
-                    <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="2.4rem" height="2.4rem"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
-                    </a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="2.4rem" height="2.4rem"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 114.75 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
-                    </a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="2.4rem" height="2.4rem"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.012 3.584-.07 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
-                    </a></li>
-                </ul>
-            </div>
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <p>
+            <strong>Mueez Hajwani</strong><br />
+            President, DataNexus Club<br />
+            <a href="mailto:contact1@example.com">23ds37@aiktc.ac.in</a><br />
+            +91-XXXXX-XXXXX
+          </p>
+          <p>
+            <strong>Sana Zakir Shaikh</strong><br />
+            Technical head, DataNexus Club<br />
+            <a href="mailto:contact2@example.com">23ds15@aiktc.ac.in</a><br />
+            +91-XXXXX-XXXXX
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 DataNexus. All Rights Reserved.</p>
+        <div class="footer-column">
+          <h4>Venue</h4>
+          <address>
+            Anjuman-I-Islams's Kalsekar technical Campus<br />
+            [Street Address]<br />
+            [City, State, Pincode]
+          </address>
         </div>
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <ul class="social-links">
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="2.4rem"
+                  height="2.4rem"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="2.4rem"
+                  height="2.4rem"
+                >
+                  <path
+                    d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 114.75 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="2.4rem"
+                  height="2.4rem"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.012 3.584-.07 4.85c-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 DataNexus. All Rights Reserved.</p>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
