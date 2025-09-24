@@ -122,35 +122,82 @@
           </div>
         </section>
         
-        <section id="problems" class="container reveal-on-scroll">
-            <h2>Problem Statements</h2>
-            <div class="card-grid">
-                <article class="card">
-                    <h3 class="card-title">Urban Traffic Flow Prediction</h3>
-                    <p class="card-description">Develop a model to predict traffic congestion in major city centers using historical and real-time data.</p>
-                    <div class="card-footer">
-                        <span class="tag">Difficulty: Hard</span>
-                        <a href="#" class="card-link">Read More &rarr;</a>
+        <!--- Domain Section -->
+        <<!--- Domain Section -->
+        <section id="domains" class="container reveal-on-scroll">
+            <h2>Domains</h2>
+            <p class="section-subtitle">Choose Your Challenge</p>
+
+            <div class="domains-grid">
+            <!-- Row 1 -->
+                <div class="domain-card" data-domain="healthcare">
+                    <div class="domain-image">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=60" alt="Healthcare Domain">
+                        <div class="domain-overlay">
+                            <h3>Healthcare</h3>
+                            <p>Innovating Patient Care</p>
+                        </div>
                     </div>
-                </article>
-                <article class="card">
-                    <h3 class="card-title">Healthcare Readmission Risk</h3>
-                    <p class="card-description">Analyze patient records to identify key factors that contribute to hospital readmission and build a predictive risk score.</p>
-                    <div class="card-footer">
-                        <span class="tag">Difficulty: Medium</span>
-                        <a href="#" class="card-link">Read More &rarr;</a>
+                </div>
+
+                <div class="domain-card" data-domain="fintech">
+                    <div class="domain-image">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=60" alt="Fintech Domain">
+                        <div class="domain-overlay">
+                        <h3>Fintech</h3>
+                        <p>Financial Technology</p>
                     </div>
-                </article>
-                <article class="card">
-                    <h3 class="card-title">E-commerce Churn Analysis</h3>
-                    <p class="card-description">Use customer transaction data to predict which users are likely to churn and recommend preventative strategies.</p>
-                    <div class="card-footer">
-                        <span class="tag">Difficulty: Medium</span>
-                        <a href="#" class="card-link">Read More &rarr;</a>
-                    </div>
-                </article>
+                </div>
             </div>
-        </section>
+
+             <!-- Row 2 -->
+            <div class="domain-card" data-domain="education">
+                <div class="domain-image">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=60" alt="Education Domain">
+                    <div class="domain-overlay">
+                        <h3>Education</h3>
+                        <p>Learning Reimagined</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="domain-card" data-domain="agriculture">
+                <div class="domain-image">
+                    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&auto=format&fit=crop&q=60" alt="Agriculture Domain">
+                    <div class="domain-overlay">
+                        <h3>Agriculture</h3>
+                        <p>Sustainable Farming</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="domain-card domain-card-center" data-domain="innovation">
+                <div class="domain-image">
+                    <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&auto=format&fit=crop&q=60" alt="Open Innovation Domain">
+                    <div class="domain-overlay">
+                        <h3>Open Innovation</h3>
+                        <p>Boundary-Pushing Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domain Modal -->
+    <div id="domain-modal" class="domain-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-domain-title"></h3>
+                <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body" id="domain-content">
+              <!-- JS will inject description + features here -->
+            </div>
+        </div>
+    </div>
+
 
         <section id="prizes" class="container reveal-on-scroll">
           <h1>Prizes</h1>
