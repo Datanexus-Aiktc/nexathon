@@ -242,6 +242,34 @@ section {
     background: radial-gradient(circle at 50% 50%, var(--primary), var(--bg) 70%);
     padding: var(--space-md);
 }
+
+.hero-college{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 4rem;
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--bronze);
+    font-weight: lighter;
+}
+.hero-college img{
+    width: 7rem;
+    height: auto;
+    translate: 0 1rem;
+}
+.hero-department{
+    letter-spacing: 0.2rem;
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: lighter;
+    margin-top: 1rem;
+}
+.hero-subtitle {
+    letter-spacing: 0.2rem;
+    font-size: var(--font-base);
+    margin: 0;
+   font-weight: bolder;
+}
 .hero-logos{
     display: flex;
     gap: var(--space-md);
@@ -257,6 +285,7 @@ section {
 .club-logo{
     width: 22.3rem;
     height: auto;
+    translate: 3rem;
 }
 .hero-content {
     display: flex;
@@ -269,13 +298,6 @@ section {
     align-items: center;
     gap: var(--space-sm);
     margin: var(--space-xs) 0;
-}
-
-.hero-subtitle {
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: var(--font-base);
-    margin: 0;
 }
 
 .hero-cta {
