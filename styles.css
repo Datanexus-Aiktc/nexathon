@@ -266,7 +266,7 @@ section {
 }
 .hero-subtitle {
     letter-spacing: 0.2rem;
-    font-size: var(--font-base);
+    font-size: var(--font-lg);
     margin: 0;
    font-weight: bolder;
 }
