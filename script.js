@@ -2,18 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- NEW: NAVBAR SCROLL EFFECT ---
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    }
-
     // --- MOBILE NAVIGATION TOGGLE ---
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -242,7 +230,7 @@ function initDomains() {
         modalTitle.textContent = info.title;
         domainContent.innerHTML = `
             <div class="domain-description">${info.description}</div>
-            <h4 style="color: var(--tertiary); text-align: center; margin-bottom: var(--space-md); font-family: var(--font-heading);">Key Focus Areas</h4>
+            <h4 style="color: var(--tertiary); text-align: center; margin-bottom: var(--space-md);">Key Focus Areas</h4>
             <ul class="domain-features">
                 ${info.features.map(feature => `<li>${feature}</li>`).join('')}
             </ul>
