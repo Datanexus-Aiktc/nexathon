@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
             navToggle.setAttribute('aria-expanded', !isExpanded);
         });
-        
+
         // Close menu when a link is clicked
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- SMOOTH SCROLLING FOR ANCHOR LINKS ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
             const targetId = this.getAttribute('href');
@@ -73,43 +73,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- TIMELINE STATUS AUTO SWITCH ---
     function setStatus(el, state) {
-      el.classList.remove('online', 'offline', 'ended');
-      el.classList.add(state);
+        el.classList.remove('online', 'offline', 'ended');
+        el.classList.add(state);
 
-      if (state === 'online') {
-        el.innerHTML = '<span class="dot"></span> Online';
-      } else if (state === 'offline') {
-        el.innerHTML = '<span class="dot"></span> Offline';
-      } else {
-        el.innerHTML = '<span class="dot"></span> Ended';
-      }
+        if (state === 'online') {
+            el.innerHTML = '<span class="dot"></span> Online';
+        } else if (state === 'offline') {
+            el.innerHTML = '<span class="dot"></span> Offline';
+        } else {
+            el.innerHTML = '<span class="dot"></span> Ended';
+        }
     }
 
     const timelineCards = document.querySelectorAll('.timeline-card');
     let latestOnlineIndex = -1;
 
     timelineCards.forEach((card, index) => {
-      const dateStr = card.getAttribute('data-date');
-      if (!dateStr) return;
+        const dateStr = card.getAttribute('data-date');
+        if (!dateStr) return;
 
-      const eventDate = new Date(dateStr);
-      const now = new Date();
-      const status = card.querySelector('.status-pill');
+        const eventDate = new Date(dateStr);
+        const now = new Date();
+        const status = card.querySelector('.status-pill');
 
-      if (now < eventDate) {
-        setStatus(status, 'offline');
-      } else {
-        setStatus(status, 'online');
-        latestOnlineIndex = index; // track the most recent active event
-      }
+        if (now < eventDate) {
+            setStatus(status, 'offline');
+        } else {
+            setStatus(status, 'online');
+            latestOnlineIndex = index; // track the most recent active event
+        }
     });
 
     // Mark all earlier than latest as ended
     if (latestOnlineIndex > -1) {
-      for (let i = 0; i < latestOnlineIndex; i++) {
-        const prevStatus = timelineCards[i].querySelector('.status-pill');
-        setStatus(prevStatus, 'ended');
-      }
+        for (let i = 0; i < latestOnlineIndex; i++) {
+            const prevStatus = timelineCards[i].querySelector('.status-pill');
+            setStatus(prevStatus, 'ended');
+        }
     }
 
 
@@ -189,10 +189,10 @@ function initDomains() {
 
     // Enhanced click event with animation
     domainCards.forEach(card => {
-        card.addEventListener('click', function(e) {
+        card.addEventListener('click', function (e) {
             e.preventDefault();
             const domain = this.getAttribute('data-domain');
-            
+
             // Add click animation
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
@@ -207,7 +207,7 @@ function initDomains() {
     modalOverlay.addEventListener('click', closeDomainModal);
 
     // Enhanced keyboard controls
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && domainModal.classList.contains('active')) {
             closeDomainModal();
         }
@@ -219,7 +219,7 @@ function initDomains() {
 
         // Add body class to prevent background scrolling
         document.body.classList.add('domain-modal-open');
-        
+
         // Animate modal appearance
         domainModal.style.display = 'flex';
         setTimeout(() => {
@@ -250,10 +250,10 @@ function initDomains() {
 
     function closeDomainModal() {
         domainModal.classList.remove('active');
-        
+
         setTimeout(() => {
             domainModal.style.display = 'none';
-            
+
             // Remove body class to restore scrolling
             document.body.classList.remove('domain-modal-open');
         }, 300);
@@ -263,7 +263,7 @@ function initDomains() {
     let startY = 0;
     let initialScroll = 0;
 
-    domainModal.addEventListener('touchstart', function(e) {
+    domainModal.addEventListener('touchstart', function (e) {
         const modalBody = this.querySelector('.modal-body');
         if (modalBody) {
             startY = e.touches[0].clientY;
@@ -271,7 +271,7 @@ function initDomains() {
         }
     }, { passive: true });
 
-    domainModal.addEventListener('touchmove', function(e) {
+    domainModal.addEventListener('touchmove', function (e) {
         const modalBody = this.querySelector('.modal-body');
         if (!modalBody) return;
 
@@ -279,7 +279,7 @@ function initDomains() {
         const deltaY = currentY - startY;
 
         // If at top and pulling down, or at bottom and pulling up, allow page scroll
-        if ((modalBody.scrollTop === 0 && deltaY > 0) || 
+        if ((modalBody.scrollTop === 0 && deltaY > 0) ||
             (modalBody.scrollTop + modalBody.clientHeight >= modalBody.scrollHeight && deltaY < 0)) {
             e.stopPropagation();
         }
@@ -289,3 +289,18 @@ function initDomains() {
 document.addEventListener("DOMContentLoaded", () => {
     initDomains();
 });
+
+
+function toggleView() {
+    const mainCard = document.getElementById('main-card');
+    const objectivesCard = document.getElementById('objectives-card');
+
+
+    if (mainCard.classList.contains('hidden')) {
+        mainCard.classList.remove('hidden');
+        objectivesCard.classList.add('hidden');
+    } else {
+        mainCard.classList.add('hidden');
+        objectivesCard.classList.remove('hidden');
+    }
+}

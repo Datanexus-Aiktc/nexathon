@@ -10,100 +10,97 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="responsive.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <nav class="navbar">
-        <div class="nav-container">
-          <a href="#" class="nav-logo">
-            <svg
-              width="2.4rem"
-              height="2.4rem"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 2L2 7L12 12L22 7L12 2Z"
-                stroke="var(--tertiary)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M2 17L12 22L22 17"
-                stroke="var(--secondary)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M2 12L12 17L22 12"
-                stroke="var(--secondary)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span>NEXATHON</span>
-          </a>
-
-          <button
-            class="nav-toggle"
-            aria-controls="nav-menu"
-            aria-expanded="false"
-            aria-label="Open menu"
+      <div class="nav-container">
+        <a href="#" class="nav-logo">
+          <svg
+            width="2.4rem"
+            height="2.4rem"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
-            <svg
-              class="hamburger-icon"
-              viewBox="0 0 100 80"
-              width="24"
-              height="24"
-              fill="var(--text)"
-            >
-              <rect width="100" height="15" rx="8"></rect>
-              <rect y="30" width="100" height="15" rx="8"></rect>
-              <rect y="60" width="100" height="15" rx="8"></rect>
-            </svg>
-          </button>
+            <path
+              d="M12 2L2 7L12 12L22 7L12 2Z"
+              stroke="var(--tertiary)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2 17L12 22L22 17"
+              stroke="var(--secondary)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M2 12L12 17L22 12"
+              stroke="var(--secondary)"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>NEXATHON</span>
+        </a>
 
-          <div class="nav-menu" id="nav-menu">
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#timeline">Timeline</a></li>
-              <li><a href="#domains">Domains</a></li>
-              <li><a href="#rules">Rules</a></li>
-            </ul>
-            <a
-              href="https://forms.gle/ZiBoX2UBFCsjp9uf7"
-              class="btn btn-primary"
-              >Register Now</a
-            >
-          </div>
+        <button
+          class="nav-toggle"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          aria-label="Open menu"
+        >
+          <svg
+            class="hamburger-icon"
+            viewBox="0 0 100 80"
+            width="24"
+            height="24"
+            fill="var(--text)"
+          >
+            <rect width="100" height="15" rx="8"></rect>
+            <rect y="30" width="100" height="15" rx="8"></rect>
+            <rect y="60" width="100" height="15" rx="8"></rect>
+          </svg>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#domains">Domains</a></li>
+            <li><a href="#rules">Rules</a></li>
+          </ul>
+          <a href="https://forms.gle/ZiBoX2UBFCsjp9uf7" class="btn btn-primary"
+            >Register Now</a
+          >
         </div>
+      </div>
     </nav>
     <header class="hero">
-      
       <div class="hero-content">
         <p class="hero-college">
-          <img src="./images/KTC-LOGO-1-removebg-preview.png" alt="aiktc">
+          <img src="./images/KTC-LOGO-1-removebg-preview.png" alt="aiktc" />
           Anjuman-I-Islams's Kalsekar technical Campus
         </p>
         <p class="hero-department">Department of Data Science Engineering</p>
         <p class="hero-subtitle">Datanexus Club and S4DS presents</p>
         <div class="hero-logos">
-            <img
+          <img
             src="./images/nexus.png"
             alt="DataNexus Club Logo"
             class="club-logo"
-            />
-            <img
-            src="./images/s4ds_logo.jpg"
-            alt="S4DS Logo"
-            class="s4ds-logo"
-            />
+          />
+          <img src="./images/s4ds_logo.jpg" alt="S4DS Logo" class="s4ds-logo" />
         </div>
         <h1 class="hero-title">
           <svg
@@ -148,31 +145,131 @@
     </header>
 
     <main>
-      <section id="about" class="container reveal-on-scroll">
-        <h2>What is Nexathon?</h2>
-        <p>
-          Nexathon is an intensive data science and machine learning competition
-          where innovators, developers, and data enthusiasts collaborate to
-          solve challenging real-world problems. It's a platform to learn,
-          build, and showcase your skills in a competitive yet supportive
-          environment.
-        </p>
-        <ul>
-          <li>
-            <strong>Focus:</strong> Data Science, Machine Learning, and AI.
-          </li>
-          <li>
-            <strong>Goal:</strong> Create an impact by impementing data-driven
-            solutions.
-          </li>
-          <li>
-            <strong>Datasets:</strong> Work with unique, large-scale datasets
-            provided by our partners.
-          </li>
-        </ul>
-      </section>
+      <div class="min-h-screen flex items-center justify-center p-4">
+        <section class="nexathon-explanation">
+          <!-- Main Card -->
+          <div
+            id="main-card"
+            class="card-bg rounded-3xl shadow-lg p-6 md:p-12 text-center"
+          >
+            <h2 class="text-6xl md:text-7xl font-extrabold text-white mb-8">
+              What Is Nexathon?
+            </h2>
 
-      
+            <div class="text-3xl md:text-3xl font-semibold mb-6 leading-relaxed">
+              <p>
+                Nexathon is an intensive data science and machine learning
+                competition where innovators, developers, and data enthusiasts
+                collaborate to solve challenging<br/> real-world problems.
+              </p>
+              <p class="m-10">
+                <span class="text-accent"
+                  >It's a platform to learn, build, and showcase your skills in a
+                  competitive yet supportive environment.</span
+                >
+              </p>
+              <ul
+              >
+                <li>
+                  <strong>Focus:</strong> Data Science, Machine Learning, and AI.
+                </li>
+                <li>
+                  <strong>Goal:</strong> Create an impact by implementing
+                  data-driven solutions.
+                </li>
+                <li>
+                  <strong>Datasets:</strong> Work with unique, large-scale
+                  datasets provided by our partners.
+                </li>
+              </ul>
+            </div>
+
+            <button
+              onclick="toggleView()"
+              class="inline-block px-14 py-6 button-bg font-bold rounded-full shadow-md text-3xl mt-4"
+            >
+              Objectives & Outcomes
+            </button>
+          </div>
+
+          <!-- Objectives & Outcomes Card -->
+          <div
+            id="objectives-card"
+            class="card-bg rounded-3xl shadow-3xl p-6 md:p-12 text-center hidden"
+          >
+            <h2 class="text-3xl md:text-7xl font-extrabold text-white mb-6">
+              Nexathon Objectives
+            </h2>
+
+            <ul
+              class="text-left text-2xl md:text-3xl font-semibold mb-10 space-y-4"
+            >
+              <li class="list-item">
+                <span class="list-marker"></span>1.Enhance
+                <span class="text-accent ml-1 pr-1">Digital Skills</span> <span class="p-1">Proficiency</span>
+              </li>
+              <li class="list-item">
+                <span class="list-marker"></span>2.Foster
+                <span class="text-accent ml-1  pr-1">Innovation</span> and Creativity
+              </li>
+              <li class="list-item">
+                <span class="list-marker"></span>3.Promote
+                <span class="text-accent ml-1"
+                  >Interdisciplinary Collaboration</span
+                >
+              </li>
+              <li class="list-item">
+                <span class="list-marker"></span>4.Achieve
+                <span class="text-accent ml-1">National Recognition</span>
+              </li>
+              <li class="list-item">
+                <span class="list-marker"></span>5.Enhance
+                <span class="text-accent ml-1">Employability</span>
+              </li>
+              <li class="list-item">
+                <span class="list-marker"></span>6.Develop
+                <span class="text-accent ml-1"
+                  >Real-World Problem-Solving Skills</span
+                >
+              </li>
+            </ul>
+
+            <h2 class="text-3xl md:text-7xl font-extrabold text-white mb-8">
+              Nexathon Outcomes
+            </h2>
+
+            <ul
+              class="text-left text-lg md:text-3xl font-semibold mb-10 space-y-4"
+            >
+              <li class="list-item">
+                1. Participants will demonstrate proficiency in digital skills
+                through practical application and
+                <span class="text-accent ml-1">hands-on learning.</span>
+              </li>
+              <li class="list-item">
+                2. Participants will showcase innovative and creative thinking
+                in their
+                <span class="text-accent px-1 ml-1"> web design solutions.</span>
+              </li>
+              <li class="list-item">
+                3. The event will cultivate a collaborative environment,
+                fostering communication,
+                <span class="text-accent ml-1"
+                  >teamwork, and problem-solving abilities.</span
+                >
+              </li>
+            </ul>
+
+            <button
+              onclick="toggleView()"
+              class="inline-block px-10 py-4 button-bg font-bold rounded-full shadow-md text-xl"
+            >
+              Go Back
+            </button>
+          </div>
+        </section>
+      </div>
+
       <!-- prizes section -->
       <section id="prizes" class="container reveal-on-scroll">
         <h1>Prizes</h1>
@@ -219,7 +316,6 @@
         </div>
       </section>
 
-
       <section id="timeline" class="container reveal-on-scroll">
         <h2>Event Timeline</h2>
         <div class="timeline-line">
@@ -227,7 +323,8 @@
           <div class="timeline-card" data-date="2025-09-24T00:00:00+05:30">
             <h3>Registrations Open</h3>
             <p>
-              Team registrations open for Nexathon. Gather your squad and sign up!
+              Team registrations open for Nexathon. Gather your squad and sign
+              up!
             </p>
             <div class="timeline-footer">
               <span class="status-pill offline"
@@ -283,94 +380,113 @@
         </div>
       </section>
 
-<!--- Domain Section -->
+      <!--- Domain Section -->
       <section id="domains" class="container reveal-on-scroll">
-            <h2>Domains</h2>
-            <p class="section-subtitle-text">Choose your challenge</p>
+        <h2>Domains</h2>
+        <p class="section-subtitle-text">Choose your challenge</p>
 
-            <div class="domains-grid">
-                <!-- Healthcare -->
-                <div class="domain-card" data-domain="healthcare">
-                    <div class="domain-image">
-                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=60" alt="Healthcare Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Healthcare</h3>
-                            <p>Innovating Patient Care</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fintech -->
-                <div class="domain-card" data-domain="fintech">
-                    <div class="domain-image">
-                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=60" alt="Fintech Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Fintech</h3>
-                            <p>Financial Technology</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="domain-card" data-domain="education">
-                    <div class="domain-image">
-                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=60" alt="Education Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Education</h3>
-                            <p>Learning Reimagined</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Agriculture -->
-                <div class="domain-card" data-domain="agriculture">
-                    <div class="domain-image">
-                        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&auto=format&fit=crop&q=60" alt="Agriculture Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Agriculture</h3>
-                            <p>Sustainable Farming</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Open Innovation -->
-                <div class="domain-card" data-domain="innovation">
-                    <div class="domain-image">
-                        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&auto=format&fit=crop&q=60" alt="Open Innovation Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Open Innovation</h3>
-                            <p>Boundary-Pushing Solutions</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ideation -->
-                <div class="domain-card" data-domain="ideation">
-                    <div class="domain-image">
-                        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&auto=format&fit=crop&q=60" alt="Open Innovation Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Ideation</h3>
-                            <p>Poster Presentation</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="domains-grid">
+          <!-- Healthcare -->
+          <div class="domain-card" data-domain="healthcare">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=60"
+                alt="Healthcare Domain"
+              />
+              <div class="domain-overlay always-visible">
+                <h3>Healthcare</h3>
+                <p>Innovating Patient Care</p>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- Domain Modal -->
-        <div id="domain-modal" class="domain-modal">
-            <div class="modal-overlay"></div>
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 id="modal-domain-title"></h3>
-                    <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
-                </div>
-                <div class="modal-body" id="domain-content">
-                    <!-- JS will inject description here -->
-                </div>
+          <!-- Fintech -->
+          <div class="domain-card" data-domain="fintech">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=60"
+                alt="Fintech Domain"
+              />
+              <div class="domain-overlay always-visible">
+                <h3>Fintech</h3>
+                <p>Financial Technology</p>
+              </div>
             </div>
+          </div>
+
+          <!-- Education -->
+          <div class="domain-card" data-domain="education">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=60"
+                alt="Education Domain"
+              />
+              <div class="domain-overlay always-visible">
+                <h3>Education</h3>
+                <p>Learning Reimagined</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agriculture -->
+          <div class="domain-card" data-domain="agriculture">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&auto=format&fit=crop&q=60"
+                alt="Agriculture Domain"
+              />
+              <div class="domain-overlay always-visible">
+                <h3>Agriculture</h3>
+                <p>Sustainable Farming</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Open Innovation -->
+          <div class="domain-card" data-domain="innovation">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&auto=format&fit=crop&q=60"
+                alt="Open Innovation Domain"
+              />
+              <div class="domain-overlay always-visible">
+                <h3>Open Innovation</h3>
+                <p>Boundary-Pushing Solutions</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ideation -->
+          <div class="domain-card" data-domain="ideation">
+            <div class="domain-image">
+              <img
+                src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&auto=format&fit=crop&q=60"
+                alt="Open Innovation Domain"
+              />
+              <div class="domain-overlay always-visible">
+                <h3>Ideation</h3>
+                <p>Poster Presentation</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
+      <!-- Domain Modal -->
+      <div id="domain-modal" class="domain-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 id="modal-domain-title"></h3>
+            <button id="close-modal" class="close-btn" aria-label="Close">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body" id="domain-content">
+            <!-- JS will inject description here -->
+          </div>
+        </div>
+      </div>
 
       <!-- guidelines section -->
       <section id="guidelines" class="container reveal-on-scroll info-box">
@@ -559,20 +675,28 @@
           <h4>Venue</h4>
           <address>
             Anjuman-I-Islams's Kalsekar Technical Campus<br />
-            Plot No. 2 & 3, Sector - 16, Near Thana Naka, Khandagaon
-            New Panvel, Navi Mumbai<br />
-          </address><br />
+            Plot No. 2 & 3, Sector - 16, Near Thana Naka, Khandagaon New Panvel,
+            Navi Mumbai<br />
+          </address>
+          <br />
           <div class="map-container">
-          <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.4421014005075!2d73.10204687391116!3d19.000230854349347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e83a36fbf179%3A0xbbb0905051e8c56e!2sAnjuman-I-Islam&#39;s%20Kalsekar%20Technical%20Campus!5e0!3m2!1sen!2sin!4v1758731088125!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          width="600"
-          height="300"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.4421014005075!2d73.10204687391116!3d19.000230854349347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e83a36fbf179%3A0xbbb0905051e8c56e!2sAnjuman-I-Islam&#39;s%20Kalsekar%20Technical%20Campus!5e0!3m2!1sen!2sin!4v1758731088125!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              width="600"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
         </div>
 
         <div class="footer-column">
