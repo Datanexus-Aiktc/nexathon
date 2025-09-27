@@ -174,6 +174,16 @@ function initDomains() {
                 "<strong>Social Impact:</strong> Tech for community development and equality",
                 "<strong>Future Tech:</strong> Exploring unexplored AI, IoT, and robotics ideas"
             ]
+        },
+        ideation: {
+            title: "Ideation Domain",
+            description: "Showcase your creativity through poster presentations. This domain encourages participants to communicate ideas visually, combining research, design, and storytelling.",
+            features: [
+                "<strong>Poster Design:</strong> Visually communicate innovative ideas",
+                "<strong>Research Presentation:</strong> Summarize key insights in an accessible format",
+                "<strong>Storytelling:</strong> Engage audiences with compelling narratives",
+                "<strong>Creativity:</strong> Blend visuals and content for maximum impact"
+            ]
         }
     };
 

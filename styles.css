@@ -897,13 +897,6 @@ section {
   background: var(--primary);
 }
 
-.domain-card-center {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: 50%;
-  max-width: 60rem;
-}
-
 .domain-card:hover {
   transform: translateY(-1rem) scale(1.02);
   border-color: var(--tertiary);
@@ -1085,11 +1078,6 @@ section {
 
   .domain-card {
     height: 25rem;
-  }
-
-  .domain-card-center {
-    width: 100%;
-    max-width: none;
   }
 
   .modal-content {
