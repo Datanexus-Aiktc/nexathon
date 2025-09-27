@@ -9,6 +9,7 @@
 :root {
     /* Color Palette */
     --bg: #021526;
+    --secondary-bg: rgba(0, 0, 0, 0.83);
     --text: #fffffe;
     --primary: #03346E;
     --secondary: #6EACDA;
@@ -177,7 +178,7 @@ section {
     width: 100%;
     padding: var(--space-xs) 0;
     z-index: 100;
-    background-color: var(--primary);
+    background-color: var(--secondary-bg);
 }
 
 .nav-container {
@@ -197,6 +198,13 @@ section {
     font-size: var(--font-lg);
     color: var(--text);
     text-decoration: none;
+}
+
+.nav-logo img {
+    width: 4rem;
+    height: auto;
+    display: block;
+    translate: 5px 3px;
 }
 
 .nav-toggle {
@@ -286,6 +294,11 @@ section {
     width: 22.3rem;
     height: auto;
     translate: 3rem;
+}
+.hero-nexathon{
+    width: 7.5rem;
+    height: 6rem;
+    translate: 1rem 0.5rem;
 }
 .hero-content {
     display: flex;
