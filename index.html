@@ -9,12 +9,18 @@
       name="description"
       content="Join Nexathon, a 24-hour data science and machine learning hackathon. Solve real-world problems, win exciting prizes, and showcase your skills."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="responsive.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="hero-background"></div>
+
     <nav class="navbar">
         <div class="nav-container">
           <a href="#" class="nav-logo">
@@ -116,14 +122,12 @@
       </section>
 
       
-      <!-- prizes section -->
       <section id="prizes" class="container reveal-on-scroll">
         <h1>Prizes</h1>
 
         <div class="prizes-top">
           <div class="prize-card winner">
             <div class="prize-rank">
-              <!-- Using Heroicons CDN for winner trophy -->
               <svg
                 class="trophy-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +149,6 @@
         <div class="prizes-bottom">
           <div class="prize-card second">
             <div class="prize-rank">
-              <!-- Using Font Awesome for medals -->
               <i class="fas fa-medal medal-icon silver"></i>
             </div>
             <h3>1st Runner Up</h3>
@@ -166,7 +169,6 @@
       <section id="timeline" class="container reveal-on-scroll">
         <h2>Event Timeline</h2>
         <div class="timeline-line">
-          <!---                           TIME="yyyy-mm-ddT24HourTime+timezone"   -->
           <div class="timeline-card" data-date="2025-09-24T00:00:00+05:30">
             <h3>Registrations Open</h3>
             <p>
@@ -226,96 +228,86 @@
         </div>
       </section>
 
-<!--- Domain Section -->
-      <section id="domains" class="container reveal-on-scroll">
+<section id="domains" class="container reveal-on-scroll">
             <h2>Domains</h2>
             <p class="section-subtitle-text">Choose your challenge</p>
 
             <div class="domains-grid">
-                <!-- Healthcare -->
                 <div class="domain-card" data-domain="healthcare">
                     <div class="domain-image">
                         <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=60" alt="Healthcare Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Healthcare</h3>
-                            <p>Innovating Patient Care</p>
-                        </div>
+                    </div>
+                    <div class="domain-overlay">
+                        <h3>Healthcare</h3>
+                        <p>Innovating Patient Care</p>
                     </div>
                 </div>
 
-                <!-- Fintech -->
                 <div class="domain-card" data-domain="fintech">
                     <div class="domain-image">
                         <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&auto=format&fit=crop&q=60" alt="Fintech Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Fintech</h3>
-                            <p>Financial Technology</p>
-                        </div>
+                    </div>
+                     <div class="domain-overlay">
+                        <h3>Fintech</h3>
+                        <p>Financial Technology</p>
                     </div>
                 </div>
 
-                <!-- Education -->
                 <div class="domain-card" data-domain="education">
                     <div class="domain-image">
                         <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=60" alt="Education Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Education</h3>
-                            <p>Learning Reimagined</p>
-                        </div>
+                    </div>
+                    <div class="domain-overlay">
+                        <h3>Education</h3>
+                        <p>Learning Reimagined</p>
                     </div>
                 </div>
 
-                <!-- Agriculture -->
                 <div class="domain-card" data-domain="agriculture">
                     <div class="domain-image">
                         <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800&auto=format&fit=crop&q=60" alt="Agriculture Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Agriculture</h3>
-                            <p>Sustainable Farming</p>
-                        </div>
+                    </div>
+                    <div class="domain-overlay">
+                        <h3>Agriculture</h3>
+                        <p>Sustainable Farming</p>
                     </div>
                 </div>
 
-                <!-- Open Innovation -->
                 <div class="domain-card" data-domain="innovation">
                     <div class="domain-image">
                         <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=800&auto=format&fit=crop&q=60" alt="Open Innovation Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Open Innovation</h3>
-                            <p>Boundary-Pushing Solutions</p>
-                        </div>
+                    </div>
+                    <div class="domain-overlay">
+                        <h3>Open Innovation</h3>
+                        <p>Boundary-Pushing Solutions</p>
                     </div>
                 </div>
 
-                <!-- Ideation -->
                 <div class="domain-card" data-domain="ideation">
                     <div class="domain-image">
                         <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&auto=format&fit=crop&q=60" alt="Open Innovation Domain">
-                        <div class="domain-overlay always-visible">
-                            <h3>Ideation</h3>
-                            <p>Poster Presentation</p>
-                        </div>
+                    </div>
+                    <div class="domain-overlay">
+                        <h3>Ideation</h3>
+                        <p>Poster Presentation</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Domain Modal -->
         <div id="domain-modal" class="domain-modal">
             <div class="modal-overlay"></div>
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 id="modal-domain-title"></h3>
-                    <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+                    <button id="close-modal" class="close-btn" aria-label="Close">×</button>
                 </div>
                 <div class="modal-body" id="domain-content">
-                    <!-- JS will inject description here -->
-                </div>
+                    </div>
             </div>
         </div>
 
 
-      <!-- guidelines section -->
       <section id="guidelines" class="container reveal-on-scroll info-box">
         <h2>Guidelines</h2>
         <ol class="guidelines-list">
@@ -507,7 +499,7 @@
           </address><br />
           <div class="map-container">
           <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.4421014005075!2d73.10204687391116!3d19.000230854349347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e83a36fbf179%3A0xbbb0905051e8c56e!2sAnjuman-I-Islam&#39;s%20Kalsekar%20Technical%20Campus!5e0!3m2!1sen!2sin!4v1758731088125!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.4421014005075!2d73.10204687391116!3d19.000230854349347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e83a36fbf179%3A0xbbb0905051e8c56e!2sAnjuman-I-Islam's%20Kalsekar%20Technical%20Campus!5e0!3m2!1sen!2sin!4v1758731088125!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           width="600"
           height="300"
           style="border:0;"
@@ -582,7 +574,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 DataNexus. All Rights Reserved.</p>
+        <p>© 2025 DataNexus. All Rights Reserved.</p>
       </div>
     </footer>
   </body>
