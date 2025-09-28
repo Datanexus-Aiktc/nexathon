@@ -126,7 +126,7 @@
 
     <main>
       <div class="min-h-screen flex items-center justify-center p-4">
-        <section class="nexathon-explanation">
+        <section class="max-w-5xl w-full">
           <!-- Main Card -->
           <div
             id="main-card"
@@ -140,13 +140,12 @@
               <p>
                 Nexathon is an intensive data science and machine learning
                 competition where innovators, developers, and data enthusiasts
-                collaborate to solve challenging<br/> real-world problems.
+                collaborate to solve challenging real-world problems.
               </p>
               <p class="m-10">
                 <span class="text-accent"
                   >It's a platform to learn, build, and showcase your skills in a
-                  competitive yet supportive environment.</span
-                >
+                  competitive yet supportive environment.</span>
               </p>
               <ul
               >
@@ -168,87 +167,59 @@
               onclick="toggleView()"
               class="inline-block px-14 py-6 button-bg font-bold rounded-full shadow-md text-3xl mt-4"
             >
-              Objectives & Outcomes
+              About Registration
             </button>
           </div>
 
           <!-- Objectives & Outcomes Card -->
           <div
-            id="objectives-card"
+            id="registration-card"
             class="card-bg rounded-3xl shadow-3xl p-6 md:p-12 text-center hidden"
           >
-            <h2 class="text-3xl md:text-7xl font-extrabold text-white mb-6">
-              Nexathon Objectives
+            <h2 class="text-3xl md:text-7xl font-extrabold text-white mb-10">
+              About Registration
             </h2>
-
-            <ul
-              class="text-left text-2xl md:text-3xl font-semibold mb-10 space-y-4"
-            >
-              <li class="list-item">
-                <span class="list-marker"></span>1.Enhance
-                <span class="text-accent ml-1 pr-1">Digital Skills</span> <span class="p-1">Proficiency</span>
-              </li>
-              <li class="list-item">
-                <span class="list-marker"></span>2.Foster
-                <span class="text-accent ml-1  pr-1">Innovation</span> and Creativity
-              </li>
-              <li class="list-item">
-                <span class="list-marker"></span>3.Promote
-                <span class="text-accent ml-1"
-                  >Interdisciplinary Collaboration</span
-                >
-              </li>
-              <li class="list-item">
-                <span class="list-marker"></span>4.Achieve
-                <span class="text-accent ml-1">National Recognition</span>
-              </li>
-              <li class="list-item">
-                <span class="list-marker"></span>5.Enhance
-                <span class="text-accent ml-1">Employability</span>
-              </li>
-              <li class="list-item">
-                <span class="list-marker"></span>6.Develop
-                <span class="text-accent ml-1"
-                  >Real-World Problem-Solving Skills</span
-                >
-              </li>
-            </ul>
-
-            <h2 class="text-3xl md:text-7xl font-extrabold text-white mb-8">
-              Nexathon Outcomes
-            </h2>
-
-            <ul
-              class="text-left text-lg md:text-3xl font-semibold mb-10 space-y-4"
-            >
-              <li class="list-item">
-                1. Participants will demonstrate proficiency in digital skills
-                through practical application and
-                <span class="text-accent ml-1">hands-on learning.</span>
-              </li>
-              <li class="list-item">
-                2. Participants will showcase innovative and creative thinking
-                in their
-                <span class="text-accent px-1 ml-1"> web design solutions.</span>
-              </li>
-              <li class="list-item">
-                3. The event will cultivate a collaborative environment,
-                fostering communication,
-                <span class="text-accent ml-1"
-                  >teamwork, and problem-solving abilities.</span
-                >
-              </li>
-            </ul>
-
-            <button
-              onclick="toggleView()"
-              class="inline-block px-10 py-4 button-bg font-bold rounded-full shadow-md text-xl"
-            >
-              Go Back
-            </button>
-          </div>
-        </section>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+              <div class="flex-shrink-0 flex justify-center items-center">
+      <div class="w-36 h-36 md:w-44 md:h-44 flex items-center justify-center rounded-full bg-[#6EACDA] text-[#021526] font-extrabold text-2xl md:text-3xl shadow-lg">
+        ₹ 400
       </div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="text-center md:text-left max-w-lg">
+      <h3 class="text-xl md:text-2xl font-bold text-accent mb-4">Registration Fee</h3>
+      <p class="mb-6 text-base md:text-lg font-semibold">Complete registration package includes:</p>
+
+      <ul class="space-y-3 text-base md:text-lg font-semibold">
+        <li class="flex justify-center md:justify-start items-center">
+          <span class="text-accent mr-2">✔</span> Event participation
+        </li>
+        <li class="flex justify-center md:justify-start items-center">
+          <span class="text-accent mr-2">✔</span> Lunch included
+        </li>
+        <li class="flex justify-center md:justify-start items-center">
+          <span class="text-accent mr-2">✔</span> Snacks & Refreshments
+        </li>
+        <li class="flex justify-center md:justify-start items-center">
+          <span class="text-accent mr-2">✔</span> Networking opportunities
+        </li>
+        <li class="flex justify-center md:justify-start items-center">
+          <span class="text-accent mr-2">✔</span> Certificate of Participation
+        </li>
+      </ul>
+
+      <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+        <button class="px-8 py-3 md:px-10 md:py-4 button-bg font-bold rounded-full shadow-md text-lg md:text-xl">
+          Register Now
+        </button>
+        <button onclick="toggleView()" class="px-8 py-3 md:px-10 md:py-4 button-bg font-bold rounded-full shadow-md text-lg md:text-xl">
+          Go Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
       
       <section id="prizes" class="container reveal-on-scroll">

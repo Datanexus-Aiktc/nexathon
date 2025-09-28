@@ -352,16 +352,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function toggleView() {
-    const mainCard = document.getElementById('main-card');
-    const objectivesCard = document.getElementById('objectives-card');
+      const mainCard = document.getElementById('main-card');
+      const registrationCard = document.getElementById('registration-card');
 
-
-    if (mainCard.classList.contains('hidden')) {
+      if (mainCard.classList.contains('hidden')) {
         mainCard.classList.remove('hidden');
-        objectivesCard.classList.add('hidden');
-    } else {
+        registrationCard.classList.add('hidden');
+      } else {
         mainCard.classList.add('hidden');
-        objectivesCard.classList.remove('hidden');
+        registrationCard.classList.remove('hidden');
+      }
     }
-}
-
