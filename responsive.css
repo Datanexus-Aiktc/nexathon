@@ -1,36 +1,40 @@
 /* --- Mobile Navigation --- */
 @media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
+  .nav-toggle {
+    display: block;
+  }
+
   /* Use transform for off-canvas nav to avoid creating horizontal overflow */
   .nav-menu {
     position: fixed;
     top: 0;
-    right: 0; /* keep anchored to the right, hide with transform */
+    right: 0;
+    /* keep anchored to the right, hide with transform */
     width: 70%;
     height: 100vh;
     background-color: var(--primary);
-    transform: translateX(100%); /* hide off-screen to the right */
+    transform: translateX(100%);
+    /* hide off-screen to the right */
     transition: transform var(--transition-speed) ease-in-out;
     will-change: transform;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: -0.5rem 0 2rem rgba(0,0,0,0.5);
+    box-shadow: -0.5rem 0 2rem rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    z-index: 1340; /* keep menu above page content but below the toggle */
+    z-index: 1340;
+    /* keep menu above page content but below the toggle */
   }
 
   .nav-menu.active {
     transform: translateX(0);
   }
 
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-    }
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+  }
 
   /* ensure the toggle button sits above everything but below the menu */
   .nav-toggle {
@@ -43,8 +47,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1320; /* above page but below modal (1400) */
+    z-index: 1320;
+    /* above page but below modal (1400) */
     background: var(--secondary-bg);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
   }
 
@@ -53,10 +59,12 @@
     transform: translateY(30px) rotate(45deg);
     transform-origin: center;
   }
+
   .nav-toggle[aria-expanded="true"] .hamburger-icon rect:nth-child(2) {
     opacity: 0;
     transform: scaleX(0);
   }
+
   .nav-toggle[aria-expanded="true"] .hamburger-icon rect:nth-child(3) {
     transform: translateY(-30px) rotate(-45deg);
     transform-origin: center;
@@ -65,43 +73,50 @@
 
 /* --- Hero on Mobile --- */
 @media (max-width: 768px) {
-    h1 { 
-        font-size: 4rem; 
-    }
-    h2 { 
-        font-size: 3rem; 
-    }
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .hero-college{
-      font-size: 2.5rem;
-    }
-    .hero-college img{
-      width: 4.5rem;
-    }
-    .hero-department{
-      font-size: 2rem;
-    }
-    .s4ds-logo{
-        width: 9rem;
-        height: auto;    
-    }
-    .club-logo{
-        width: 15rem;
-        height: auto;
-    }
+  .hero-college {
+    font-size: 2.5rem;
+  }
+
+  .hero-college img {
+    width: 4.5rem;
+  }
+
+  .hero-department {
+    font-size: 2rem;
+  }
+
+  .s4ds-logo {
+    width: 9rem;
+    height: auto;
+  }
+
+  .club-logo {
+    width: 15rem;
+    height: auto;
+  }
 }
 
-/* Timeline on mobile */   
+/* Timeline on mobile */
 @media (max-width: 768px) {
   .timeline-line {
     padding: 0 var(--space-sm);
     margin-left: var(--space-sm);
   }
+
   .timeline-line::before {
     transform: none;
   }
+
   .timeline-footer {
     flex-direction: column;
     align-items: flex-start;
@@ -132,15 +147,15 @@
     width: 80%;
     margin-bottom: var(--space-md);
   }
-  
+
   .prize-rank {
     font-size: 5rem;
   }
-  
+
   .prize-card h3 {
     font-size: 2rem;
   }
-  
+
   .prize-card p {
     font-size: 1.5rem;
   }
@@ -166,14 +181,15 @@
 
   /* On mobile, make the overlay always visible for clarity */
   .domain-overlay {
-      transform: translateY(0);
-      opacity: 1;
-      justify-content: center;
-      background: linear-gradient(135deg, rgba(2, 21, 38, 0.4) 0%, rgba(2, 21, 38, 0.8) 100%);
+    transform: translateY(0);
+    opacity: 1;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(2, 21, 38, 0.4) 0%, rgba(2, 21, 38, 0.8) 100%);
   }
+
   .domain-overlay h3 {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 
   .domain-card {
@@ -202,7 +218,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1400; /* above nav (nav-menu z-index:1300) */
+    z-index: 1400;
+    /* above nav (nav-menu z-index:1300) */
     display: none;
     align-items: center;
     justify-content: center;
@@ -222,7 +239,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 1402; /* above overlay */
+    z-index: 1402;
+    /* above overlay */
   }
 
   .modal-body {
@@ -267,6 +285,7 @@
     width: 100%;
     height: 100%;
     background: rgba(2, 21, 38, 0.95);
+    -webkit-backdrop-filter: blur(1rem);
     backdrop-filter: blur(1rem);
     z-index: 1401;
   }
@@ -274,13 +293,13 @@
   /* Fix for iOS Safari */
   @supports (-webkit-touch-callout: none) {
     .modal-body {
-        -webkit-overflow-scrolling: touch;
-        overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      overflow-y: scroll;
     }
-    
+
     .modal-content {
-        height: -webkit-fill-available;
-        max-height: -webkit-fill-available;
+      height: -webkit-fill-available;
+      max-height: -webkit-fill-available;
     }
   }
 }
@@ -336,9 +355,12 @@ body.domain-modal-open {
 
 /* Global safety: prevent horizontal overflow on small devices and disable overscroll chaining */
 @media (max-width: 1024px) {
-  html, body {
+
+  html,
+  body {
     overflow-x: hidden;
-    touch-action: pan-y; /* allow vertical pan only */
+    touch-action: pan-y;
+    /* allow vertical pan only */
     overscroll-behavior-x: contain;
   }
 
@@ -350,8 +372,8 @@ body.domain-modal-open {
   }
 
   /* When the off-canvas nav is active, ensure the body doesn't scroll */
-  .nav-menu.active + .page-lock,
-  .nav-menu.active ~ .page-lock {
+  .nav-menu.active+.page-lock,
+  .nav-menu.active~.page-lock {
     display: block;
   }
 }
@@ -360,7 +382,9 @@ body.domain-modal-open {
   display: none;
   position: fixed;
   inset: 0;
-  z-index: 1290; /* below nav (1300) */
-  background: transparent; /* optional: rgba(0,0,0,0.2) to dim */
+  z-index: 1290;
+  /* below nav (1300) */
+  background: transparent;
+  /* optional: rgba(0,0,0,0.2) to dim */
   pointer-events: auto;
 }

@@ -349,3 +349,15 @@ function initDomains() {
 document.addEventListener("DOMContentLoaded", () => {
     initDomains();
 });
+function toggleNexathon() {
+  const mainCard = document.getElementById("main-card");
+  const registrationCard = document.getElementById("registration-card");
+
+  if (mainCard.classList.contains("hidden")) {
+    mainCard.classList.remove("hidden");
+    registrationCard.classList.add("hidden");
+  } else {
+    mainCard.classList.add("hidden");
+    registrationCard.classList.remove("hidden");
+  }
+}
