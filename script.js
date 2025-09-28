@@ -349,6 +349,8 @@ function initDomains() {
 document.addEventListener("DOMContentLoaded", () => {
     initDomains();
 });
+
+// About Section
 function toggleNexathon() {
   const mainCard = document.getElementById("main-card");
   const registrationCard = document.getElementById("registration-card");
