@@ -2,15 +2,42 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- NEW: NAVBAR SCROLL EFFECT ---
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+
     // --- MOBILE NAVIGATION TOGGLE ---
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', () => {
+            const willOpen = !navMenu.classList.contains('active');
             navMenu.classList.toggle('active');
-            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navToggle.setAttribute('aria-expanded', String(willOpen));
+
+            // Lock body scroll when nav opens
+            if (willOpen) {
+                document.body.classList.add('nav-open');
+
+                // If domain modal is open, close it to avoid double overlays
+                const domainModalEl = document.getElementById('domain-modal');
+                if (domainModalEl && domainModalEl.classList.contains('active')) {
+                    domainModalEl.classList.remove('active');
+                    setTimeout(() => { domainModalEl.style.display = 'none'; }, 250);
+                    document.body.classList.remove('domain-modal-open');
+                }
+            } else {
+                document.body.classList.remove('nav-open');
+            }
         });
 
         // Close menu when a link is clicked
@@ -18,9 +45,33 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
                 navToggle.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('nav-open');
             });
         });
+
+        // If viewport expands to desktop, ensure nav is closed and body unlocked
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    document.body.classList.remove('nav-open');
+                }
+            }
+        });
     }
+
+    // Close domain modal if viewport grows to desktop to avoid stuck state
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            const domainModalEl = document.getElementById('domain-modal');
+            if (domainModalEl && domainModalEl.classList.contains('active')) {
+                domainModalEl.classList.remove('active');
+                domainModalEl.style.display = 'none';
+                document.body.classList.remove('domain-modal-open');
+            }
+        }
+    });
 
     // --- FAQ ACCORDION ---
     const faqToggles = document.querySelectorAll('.faq-toggle');
@@ -217,7 +268,16 @@ function initDomains() {
         const info = domainDescriptions[domain];
         if (!info) return;
 
-        // Add body class to prevent background scrolling
+        // Ensure nav is closed (avoid overlapping overlays) and remove nav lock
+        const navMenuEl = document.querySelector('.nav-menu');
+        const navToggleEl = document.querySelector('.nav-toggle');
+        if (navMenuEl && navMenuEl.classList.contains('active')) {
+            navMenuEl.classList.remove('active');
+            if (navToggleEl) navToggleEl.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('nav-open');
+        }
+
+        // Add body class to prevent background scrolling for modal
         document.body.classList.add('domain-modal-open');
 
         // Animate modal appearance
@@ -230,7 +290,7 @@ function initDomains() {
         modalTitle.textContent = info.title;
         domainContent.innerHTML = `
             <div class="domain-description">${info.description}</div>
-            <h4 style="color: var(--tertiary); text-align: center; margin-bottom: var(--space-md);">Key Focus Areas</h4>
+            <h4 style="color: var(--tertiary); text-align: center; margin-bottom: var(--space-md); font-family: var(--font-heading);">Key Focus Areas</h4>
             <ul class="domain-features">
                 ${info.features.map(feature => `<li>${feature}</li>`).join('')}
             </ul>
@@ -304,3 +364,4 @@ function toggleView() {
         objectivesCard.classList.remove('hidden');
     }
 }
+

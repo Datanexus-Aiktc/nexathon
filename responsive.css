@@ -1,30 +1,75 @@
-
-
 /* --- Mobile Navigation --- */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
     }
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%; /* Initially off-screen */
-        width: 70%;
-        height: 100vh;
-        background-color: var(--primary);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: right var(--transition-speed) ease-in-out;
-    }
+  /* Use transform for off-canvas nav to avoid creating horizontal overflow */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0; /* keep anchored to the right, hide with transform */
+    width: 70%;
+    height: 100vh;
+    background-color: var(--primary);
+    transform: translateX(100%); /* hide off-screen to the right */
+    transition: transform var(--transition-speed) ease-in-out;
+    will-change: transform;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -0.5rem 0 2rem rgba(0,0,0,0.5);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1340; /* keep menu above page content but below the toggle */
+  }
 
-    .nav-menu.active {
-        right: 0;
-    }
+  .nav-menu.active {
+    transform: translateX(0);
+  }
 
     .nav-links {
         flex-direction: column;
         text-align: center;
+    }
+
+  /* ensure the toggle button sits above everything but below the menu */
+  .nav-toggle {
+    z-index: 1350;
+  }
+
+  /* Make navbar fixed on mobile so it doesn't scroll away */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1320; /* above page but below modal (1400) */
+    background: var(--secondary-bg);
+    backdrop-filter: blur(6px);
+  }
+
+  /* Hamburger -> X transformation when nav is open (aria-expanded="true") */
+  .nav-toggle[aria-expanded="true"] .hamburger-icon rect:nth-child(1) {
+    transform: translateY(30px) rotate(45deg);
+    transform-origin: center;
+  }
+  .nav-toggle[aria-expanded="true"] .hamburger-icon rect:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .nav-toggle[aria-expanded="true"] .hamburger-icon rect:nth-child(3) {
+    transform: translateY(-30px) rotate(-45deg);
+    transform-origin: center;
+  }
+}
+
+/* --- Hero on Mobile --- */
+@media (max-width: 768px) {
+    h1 { 
+        font-size: 4rem; 
+    }
+    h2 { 
+        font-size: 3rem; 
     }
 }
 
@@ -39,8 +84,8 @@
       font-size: 2rem;
     }
     .s4ds-logo{
-    width: 9rem;
-    height: auto;    
+        width: 9rem;
+        height: auto;    
     }
     .club-logo{
         width: 15rem;
@@ -52,9 +97,15 @@
 @media (max-width: 768px) {
   .timeline-line {
     padding: 0 var(--space-sm);
+    margin-left: var(--space-sm);
+  }
+  .timeline-line::before {
+    left: 0; /* Align line to the left */
+    transform: none;
   }
   .timeline-card {
     text-align: left;
+    margin-left: var(--space-md); /* Give space from the line */
   }
   .timeline-footer {
     flex-direction: column;
@@ -112,6 +163,41 @@
   }
 }
 
+/* Domains Grid on Mobile */
+@media (max-width: 768px) {
+  .domains-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* On mobile, make the overlay always visible for clarity */
+  .domain-overlay {
+      transform: translateY(0);
+      opacity: 1;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(2, 21, 38, 0.4) 0%, rgba(2, 21, 38, 0.8) 100%);
+  }
+  .domain-overlay h3 {
+      transform: translateY(0);
+      opacity: 1;
+  }
+
+  .domain-card {
+    height: 25rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .modal-body {
+    padding: var(--space-md);
+  }
+
+  .domain-description {
+    font-size: var(--font-base);
+  }
+}
 
 /* --- Domain Modal Mobile - COMPLETE FIX --- */
 @media (max-width: 768px) {
@@ -121,7 +207,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 1400; /* above nav (nav-menu z-index:1300) */
     display: none;
     align-items: center;
     justify-content: center;
@@ -130,7 +216,7 @@
   }
 
   .domain-modal.active {
-    display: flex !important;
+    display: flex;
   }
 
   .modal-content {
@@ -141,16 +227,15 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: 1402; /* above overlay */
   }
 
   .modal-body {
     flex: 1;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
     padding: var(--space-md);
     /* Force scrolling capabilities */
-    overflow-scrolling: touch;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
   }
@@ -164,17 +249,17 @@
 
   /* Fix for X button shape on mobile */
   .close-btn {
-    width: 4rem !important;
-    height: 4rem !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 2.4rem !important;
-    padding: 0 !important;
-    min-width: auto !important;
-    background: rgba(110, 172, 218, 0.2) !important;
-    border: 0.2rem solid var(--secondary) !important;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    padding: 0;
+    min-width: auto;
+    background: rgba(110, 172, 218, 0.2);
+    border: 0.2rem solid var(--secondary);
     position: relative;
     z-index: 11;
   }
@@ -188,6 +273,7 @@
     height: 100%;
     background: rgba(2, 21, 38, 0.95);
     backdrop-filter: blur(1rem);
+    z-index: 1401;
   }
 
   /* Fix for iOS Safari */
@@ -218,13 +304,13 @@
   }
 
   .modal-header h3 {
-    font-size: var(--font-xl) !important;
+    font-size: var(--font-xl);
   }
 
   .close-btn {
-    width: 3.5rem !important;
-    height: 3.5rem !important;
-    font-size: 2rem !important;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
   }
 
   .modal-body {
@@ -242,13 +328,44 @@
 
 /* Critical fix for body scroll lock */
 body.domain-modal-open {
-    overflow: hidden !important;
-    width: 100% !important;
-    height: 100% !important;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 /* Ensure modal content is always scrollable */
 .modal-body {
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Global safety: prevent horizontal overflow on small devices and disable overscroll chaining */
+@media (max-width: 1024px) {
+  html, body {
+    overflow-x: hidden;
+    touch-action: pan-y; /* allow vertical pan only */
+    overscroll-behavior-x: contain;
+  }
+
+  /* Lock background when nav is open to avoid double scrolling */
+  body.nav-open {
+    overflow: hidden;
+    position: relative;
+    touch-action: none;
+  }
+
+  /* When the off-canvas nav is active, ensure the body doesn't scroll */
+  .nav-menu.active + .page-lock,
+  .nav-menu.active ~ .page-lock {
+    display: block;
+  }
+}
+
+.page-lock {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1290; /* below nav (1300) */
+  background: transparent; /* optional: rgba(0,0,0,0.2) to dim */
+  pointer-events: auto;
 }
