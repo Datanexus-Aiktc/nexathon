@@ -1,0 +1,249 @@
+
+
+/* --- Mobile Navigation --- */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Initially off-screen */
+        width: 70%;
+        height: 100vh;
+        background-color: var(--primary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right var(--transition-speed) ease-in-out;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-logos{
+
+    }
+    .s4ds-logo{
+    width: 9rem;
+    height: auto;    
+    }
+    .club-logo{
+        width: 15rem;
+        height: auto;
+    }
+}
+
+/* Timeline on mobile */   
+@media (max-width: 768px) {
+  .timeline-line {
+    padding: 0 var(--space-sm);
+  }
+  .timeline-card {
+    text-align: left;
+  }
+  .timeline-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+}
+
+
+/* --- Prizes on Mobile --- */
+@media (max-width: 768px) {
+  .prize-card.winner {
+    flex: 1 1 auto;
+    max-width: 90%;
+  }
+
+  .prizes-bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: var(--space-sm);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prizes-bottom .prize-card {
+    flex: 1 1 auto;
+    min-height: 7rem;
+    width: 80%;
+    margin-bottom: var(--space-md);
+  }
+  
+  .prize-rank {
+    font-size: 5rem;
+  }
+  
+  .prize-card h3 {
+    font-size: 2rem;
+  }
+  
+  .prize-card p {
+    font-size: 1.5rem;
+  }
+
+  .prize-card.winner .prize-rank {
+    font-size: 8rem;
+  }
+
+  .prize-card.winner h3 {
+    font-size: 4rem;
+  }
+
+  .prize-card.winner p {
+    font-size: 2.5rem;
+  }
+}
+
+
+/* --- Domain Modal Mobile - COMPLETE FIX --- */
+@media (max-width: 768px) {
+  .domain-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .domain-modal.active {
+    display: flex !important;
+  }
+
+  .modal-content {
+    width: 95vw;
+    height: 90vh;
+    max-height: 90vh;
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .modal-body {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    padding: var(--space-md);
+    /* Force scrolling capabilities */
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  .modal-header {
+    padding: var(--space-md);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Fix for X button shape on mobile */
+  .close-btn {
+    width: 4rem !important;
+    height: 4rem !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 2.4rem !important;
+    padding: 0 !important;
+    min-width: auto !important;
+    background: rgba(110, 172, 218, 0.2) !important;
+    border: 0.2rem solid var(--secondary) !important;
+    position: relative;
+    z-index: 11;
+  }
+
+  /* Ensure modal overlay doesn't interfere with scrolling */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 21, 38, 0.95);
+    backdrop-filter: blur(1rem);
+  }
+
+  /* Fix for iOS Safari */
+  @supports (-webkit-touch-callout: none) {
+    .modal-body {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: scroll;
+    }
+    
+    .modal-content {
+        height: -webkit-fill-available;
+        max-height: -webkit-fill-available;
+    }
+  }
+}
+
+/* Additional mobile optimizations for very small screens */
+@media (max-width: 480px) {
+  .modal-content {
+    width: 98vw;
+    height: 95vh;
+    max-height: 95vh;
+    margin: 2.5vh auto;
+  }
+
+  .modal-header {
+    padding: var(--space-sm);
+  }
+
+  .modal-header h3 {
+    font-size: var(--font-xl) !important;
+  }
+
+  .close-btn {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    font-size: 2rem !important;
+  }
+
+  .modal-body {
+    padding: var(--space-sm);
+  }
+
+  .domain-card {
+    min-height: 20rem;
+  }
+
+  .domain-overlay {
+    padding: var(--space-md);
+  }
+}
+
+/* Critical fix for body scroll lock */
+body.domain-modal-open {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Ensure modal content is always scrollable */
+.modal-body {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
