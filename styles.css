@@ -654,6 +654,33 @@ section {
     z-index: 2; 
 }
 
+.prize-card.poster {
+    background: linear-gradient(155deg, var(--gold-dark) 20%, var(--primary) 70%);
+}
+.prize-card.poster:hover {
+    box-shadow: 0 0 3rem rgba(110, 172, 218, 0.5);
+}
+.medal-icon.poster {
+    color: var(--gold-dark);
+    text-shadow: 0 0 2rem rgba(255, 215, 0, 0.8);
+}
+
+.prize-card.poster-runner {
+    background: linear-gradient(155deg, var(--tertiary) 20%, var(--primary) 70%);
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 98%; 
+    margin: 0 auto; 
+    
+}
+.prize-card.poster-runner:hover {
+    box-shadow: 0 0 3rem rgba(226, 226, 182, 0.5); 
+}
+.medal-icon.poster-runner {
+    color: var(--tertiary);
+    text-shadow: 0 0 2rem rgba(226, 226, 182, 0.8);
+}
+
 /* --- GUIDELINES & FAQ --- */
 .guidelines-list { 
     padding-left: var(--space-md); 

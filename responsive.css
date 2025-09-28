@@ -100,12 +100,7 @@
     margin-left: var(--space-sm);
   }
   .timeline-line::before {
-    left: 0; /* Align line to the left */
     transform: none;
-  }
-  .timeline-card {
-    text-align: left;
-    margin-left: var(--space-md); /* Give space from the line */
   }
   .timeline-footer {
     flex-direction: column;
